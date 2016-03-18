@@ -1,0 +1,31 @@
+//
+//  Yourder-PrefixHeader.pch
+//  Yourder
+//
+//  Created by Rapidzz on 29/12/2015.
+//  Copyright © 2015 Rapidzz. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "Constants.h"
+#import "NSDictionary+Utility.h"
+#import "MKNetworkKit.h"
+#import "MKNetworkEngine.h"
+#import "MKNetworkOperation.h"
+#import "MBProgressHUD.h"
+#import "RapidzzNetworkEngine.h"
+#import "AppDelegate.h"
+#import "RapidzzUtils.h"
+#import "RapidzzUserManager.h"
+
+
+#endif /* Yourder_PrefixHeader_pch */

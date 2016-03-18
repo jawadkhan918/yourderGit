@@ -1,0 +1,31 @@
+//
+//  audioApp-PrefixHeader.pch
+//  audioApp
+//
+//  Created by Arslan Ilyas on 24/08/2015.
+//  Copyright (c) 2015 Rapidzz. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "Constants.h"
+#import "NSDictionary+Utility.h"
+#import "MKNetworkKit.h"
+#import "MKNetworkEngine.h"
+#import "MKNetworkOperation.h"
+#import "RapidzzNetworkEngine.h"
+#import "MBProgressHUD.h"
+#import "AppDelegate.h"
+#import "RapidzzUtils.h"
+#import "RapidzzUserManager.h"
+
+
+#endif

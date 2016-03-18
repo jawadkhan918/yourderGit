@@ -1,0 +1,24 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "183091da-13f0-43dd-91fc-e5756fb5d005++9467" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "183091da-13f0-43dd-91fc-e5756fb5d005++9467" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DADA6AF4-CC63-457D-A47E-0FF8F1CA7BCE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "183091da-13f0-43dd-91fc-e5756fb5d005++9467" : "Yourder\/Yourder\/Mis\/TPKeyboard\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Yourder",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Yourder.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/brians.unfuddle.com\/svn\/brians_chatfire",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "183091da-13f0-43dd-91fc-e5756fb5d005++9467"
+    }
+  ]
+}
