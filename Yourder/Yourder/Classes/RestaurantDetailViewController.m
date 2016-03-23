@@ -324,6 +324,7 @@
         [[AppDelegate singleton] showAlertwith:nil andMessage:[dictResult objectForKey:@"message"]];
         [AppDelegate singleton].previousOrderId = [[dictResult objectForKey:@"order_id"] intValue];
         [AppDelegate singleton].totalBillAmount = [[dictResult objectForKey:@"total_price"] floatValue];
+        [AppDelegate singleton].table_waiter = [dictResult objectForKey:@"staff_name"];
         
         [self performSegueWithIdentifier:@"BarcodeToRestaurantmenu" sender:self];
     }
@@ -345,13 +346,6 @@
     RestaurantMenuViewController *detailVC = [segue destinationViewController];
     detailVC.dictSelectedRestaurant = self.dictSelectedRestaurant;
 }
-
-
-
-
-
-
-
 
 
 -(IBAction)back:(id)sender

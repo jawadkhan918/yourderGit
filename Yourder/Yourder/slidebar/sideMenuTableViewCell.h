@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *imgIcon;
 @property (strong, nonatomic) IBOutlet UILabel *lblTitle;
+@property (weak, nonatomic) IBOutlet UILabel *lblrestName;
 
 
 @end

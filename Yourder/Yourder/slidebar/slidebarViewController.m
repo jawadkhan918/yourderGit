@@ -13,6 +13,7 @@
 @interface slidebarViewController ()
 {
     NSArray *menuItems;
+    NSArray *arrImageIcons;
     NSDictionary *dicUserInfo;
 
 }
@@ -35,9 +36,17 @@
     [super viewDidLoad];
     
     if ([AppDelegate singleton].loginType == k_Slide_Menu_RestaurantLogin)
+    {
         menuItems = [NSArray arrayWithObjects:@"Home",@"Tables",@"Orders",@"Notifications",@"Settings",@"Logout", nil];
+        //arrImageIcons = [NSArray arrayWithObjects:@"icon-home.png",@"Tables",@"Orders",@"Notifications",@"Settings",@"Logout", nil];
+    }
+    
     else
+    {
         menuItems = [NSArray arrayWithObjects:@"Profile",@"Home", @"Payment", @"Settings",@"History",@"Notifications", @"Logout", nil];
+        
+        arrImageIcons = [NSArray arrayWithObjects:@"Profile", @"icon-home",@"icon-payment",@"icon-settings",@"icon-history",@"icon-loyalty",@"icon-logout", nil];
+    }
     
     dicUserInfo = [[NSUserDefaults standardUserDefaults]objectForKey:@"user"];
     self.tblMenu.scrollEnabled = NO;
@@ -93,7 +102,6 @@
     
     if ([AppDelegate singleton].loginType == k_Slide_Menu_UserLogin)
     {
-    
         // USER MENU BINDING
         if(dicUserInfo!= nil)
         {
@@ -117,6 +125,7 @@
                 cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
                 cell.backgroundColor = [UIColor redColor];
                 cell.lblTitle.text = [menuItems objectAtIndex:indexPath.row];
+            cell.imgIcon.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",[arrImageIcons objectAtIndex:indexPath.row]]];
         }
     }
     else //RESTAURANT MENU BINDING
@@ -125,20 +134,25 @@
         {
             cell = [tableView dequeueReusableCellWithIdentifier:@"Profile" forIndexPath:indexPath];
             cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg-sideMenu-top.png"]];
-            cell.lblUserName.text = [[AppDelegate singleton].dictLogedInRestaurantInfo objectForKey:@"rest_name"];
+            cell.lblUserName.text = [NSString stringWithFormat:@"waiter - %@",[[AppDelegate singleton].dictLogedInRestaurantInfo objectForKey:@"staff_name"]]; //[cell.lblUserName.text stringByAppendingString:[[AppDelegate singleton].dictLogedInRestaurantInfo objectForKey:@"staff_name"]];
+            cell.lblrestName.text = [[AppDelegate singleton].dictLogedInRestaurantInfo objectForKey:@"rest_name"];
             NSURL *userProfileImage = [NSURL URLWithString:[[AppDelegate singleton].dictLogedInRestaurantInfo objectForKey:@"rest_logo"]];
+            
             [cell.profileImage setImageWithURL:userProfileImage];
+            if(userProfileImage == nil)
+            {
+                cell.profileImage.image = [UIImage imageNamed:@"icon-person-notification.png"];
+            }
             cell.profileImage.layer.cornerRadius= cell.profileImage.frame.size.width / 2;
             cell.profileImage.layer.masksToBounds = YES;
             cell.profileImage.clipsToBounds = YES;
         }
-        else
-            
-        if (indexPath.row > 0)
+        else if (indexPath.row > 0)
         {
             cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
             cell.backgroundColor = [UIColor redColor];
             cell.lblTitle.text = [menuItems objectAtIndex:indexPath.row];
+            cell.imgIcon.image = [UIImage imageNamed:@""];
         }
     }
     

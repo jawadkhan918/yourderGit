@@ -193,6 +193,7 @@
 
 -(IBAction)addToCart:(id)sender
 {
+    [MBProgressHUD showHUDAddedTo:_objYourderView animated:YES];
     // GHAFAR CODE TO CLEAR SELECTED
     [AppDelegate singleton].strUsersId = @"";
     for(int i=0;i<[AppDelegate singleton].arrPersons.count;i++)
@@ -235,7 +236,7 @@
 //    }
     
     
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    //[MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSDictionary *dictParams = @{@"rest_id":[[AppDelegate singleton].dictSelectedRestaurant objectForKey:@"rest_id"]
                                  ,@"login_id":[[AppDelegate singleton].userInfo objectForKey:@"login_id"]
                                  //,@"order_totalbill":self.lblTotalAmount.text
@@ -258,7 +259,7 @@
 
 -(void) didAddOrderSuccessfully:(RapidzzBaseManager *)manager
 {
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    [MBProgressHUD hideHUDForView:_objYourderView animated:YES];
     //[[NSUserDefaults standardUserDefaults]setObject:order_id forKey:@"order_id"];
     [AppDelegate singleton].previousOrderId = [[manager.data objectForKey:@"order_id"] intValue];
     
@@ -276,7 +277,7 @@
 
 -(void) didAddOrderFailed:(RapidzzBaseManager *)manager error:(RapidzzError *)error
 {
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    [MBProgressHUD hideHUDForView:_objYourderView animated:YES];
     [[AppDelegate singleton] showAlertwith:nil andMessage:@"Failed! Please try again"];
 }
 
@@ -313,81 +314,6 @@
     //[push setData:data];
     //[push sendPushInBackground];
 }
-
-
-//- (IBAction)showServiceRequestPopup:(id)sender
-//{
-//    
-//    // Here we need to pass a full frame
-//    serviceView = [[UIView alloc]initWithFrame:CGRectMake(0, 0,300,400)];
-//    emptyView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 450, 670)];
-//    
-//    self.alertView = [[CustomIOSAlertView alloc] init];
-//    self.alertView.tag = 1002;
-//    UIButton *btnClicked = (UIButton *)sender;
-//    int index = (int)btnClicked.tag;
-//    
-//    
-//    
-//    [serviceView addSubview:[self createServiceRequestPopup:index]];
-//    
-//    serviceView.frame = CGRectMake( 40,250, serviceView.frame.size.width, serviceView.frame.size.height );
-//    emptyView.frame = CGRectMake( 0, 0, serviceView.frame.size.width+300, serviceView.frame.size.height+300 );
-//    emptyView.backgroundColor = [UIColor redColor];
-//    
-//    emptyView.backgroundColor=[[UIColor blackColor] colorWithAlphaComponent:.6];
-//    
-//    if ([[UIScreen mainScreen] bounds].size.height == 568)
-//    {
-//        serviceView.frame = CGRectMake(10,150, serviceView.frame.size.width, serviceView.frame.size.height);
-//    }
-//    else if ([[UIScreen mainScreen] bounds].size.height == 667)
-//    {
-//        serviceView.frame = CGRectMake(40,250, serviceView.frame.size.width, serviceView.frame.size.height);
-//    }
-//    else if ([[UIScreen mainScreen] bounds].size.height == 736)
-//    {
-//        serviceView.frame = CGRectMake(57,300, serviceView.frame.size.width,serviceView.frame.size.height);
-//    }
-//    
-//    
-//    
-//     [[UIApplication sharedApplication].keyWindow bringSubviewToFront:emptyView];
-//    
-//    
-//    
-//    [emptyView addSubview:serviceView];
-//    
-//    
-//    // And launch the dialog
-//    
-//    // [self.alertView show];
-//}
-//
-//
-//- (UIView *) createServiceRequestPopup: (int) index
-//{
-//    UIView *demoView;
-//    self.objServiceView = [self.storyboard instantiateViewControllerWithIdentifier:@"ServiceRequest"];
-//    //float Y_Co = self.view.frame.size.height - 430;
-//    demoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300  , 400)];
-//    self.objServiceView.view.frame = CGRectMake(0, 0, 300, 400);
-//    
-//    //ADD BUTTONS METHODS
-//    [self.objServiceView.btnDone addTarget:self action:@selector(btnDone_Tapped:) forControlEvents:UIControlEventTouchUpInside];
-//    //  [self.cardPopUp.btnDone addTarget:self action:@selector(btnDone:) forControlEvents:UIControlEventTouchUpInside];
-//    
-//    [demoView addSubview:self.objServiceView.view];
-//    return demoView;
-//}
-//
-//
-//-(IBAction)btnDone_Tapped:(id)sender
-//{
-//    serviceView.hidden = YES;
-//    emptyView.hidden = YES;
-//}
-
 
 
 

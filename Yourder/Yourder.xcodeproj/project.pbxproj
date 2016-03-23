@@ -13,6 +13,7 @@
 		2E5DFA9C1C414D270042A068 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFA9A1C414D270042A068 /* SWRevealViewController.m */; };
 		2E7713301C9981A70090E609 /* WaiterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E77132F1C9981A70090E609 /* WaiterDetailViewController.m */; };
 		2E7713361C99926A0090E609 /* TableListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7713351C99926A0090E609 /* TableListViewController.m */; };
+		2E8439741C9FF91100D6490A /* ServiceRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8439731C9FF91100D6490A /* ServiceRequestViewController.m */; };
 		2E89D9B41C4F678E00EC3DD7 /* back-arrow-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E89D9A21C4F678E00EC3DD7 /* back-arrow-red.png */; };
 		2E89D9B51C4F678E00EC3DD7 /* back-arrow-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E89D9A31C4F678E00EC3DD7 /* back-arrow-white.png */; };
 		2E89D9B61C4F678E00EC3DD7 /* checkbox-red-checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E89D9A41C4F678E00EC3DD7 /* checkbox-red-checked.png */; };
@@ -136,7 +137,6 @@
 		52D600141C92BF9000994DFB /* UserOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D600131C92BF9000994DFB /* UserOrderTableViewCell.m */; };
 		52D6001A1C92CE7900994DFB /* serviceRCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D600191C92CE7900994DFB /* serviceRCell.m */; };
 		52DEAA181C88152400903A86 /* ServiceRequestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DEAA171C88152400903A86 /* ServiceRequestTableViewCell.m */; };
-		52DEAA1B1C88153100903A86 /* ServiceRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52DEAA1A1C88153100903A86 /* ServiceRequestViewController.m */; };
 		52DEAA1E1C886A0B00903A86 /* no-photo-rest-i5.png in Resources */ = {isa = PBXBuildFile; fileRef = 52DEAA1C1C886A0B00903A86 /* no-photo-rest-i5.png */; };
 		52DEAA1F1C886A0B00903A86 /* no-photo-rest-i6.png in Resources */ = {isa = PBXBuildFile; fileRef = 52DEAA1D1C886A0B00903A86 /* no-photo-rest-i6.png */; };
 		52E8EA021C57B9C900D59716 /* USAStatesNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = 52E8EA011C57B9C900D59716 /* USAStatesNames.txt */; };
@@ -350,6 +350,8 @@
 		2E77132F1C9981A70090E609 /* WaiterDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaiterDetailViewController.m; sourceTree = "<group>"; };
 		2E7713341C99926A0090E609 /* TableListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableListViewController.h; sourceTree = "<group>"; };
 		2E7713351C99926A0090E609 /* TableListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableListViewController.m; sourceTree = "<group>"; };
+		2E8439721C9FF91000D6490A /* ServiceRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceRequestViewController.h; path = ../../ServiceRequestViewController.h; sourceTree = "<group>"; };
+		2E8439731C9FF91100D6490A /* ServiceRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceRequestViewController.m; path = ../../ServiceRequestViewController.m; sourceTree = "<group>"; };
 		2E89D9A21C4F678E00EC3DD7 /* back-arrow-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-arrow-red.png"; sourceTree = "<group>"; };
 		2E89D9A31C4F678E00EC3DD7 /* back-arrow-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-arrow-white.png"; sourceTree = "<group>"; };
 		2E89D9A41C4F678E00EC3DD7 /* checkbox-red-checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox-red-checked.png"; sourceTree = "<group>"; };
@@ -506,8 +508,6 @@
 		52D600191C92CE7900994DFB /* serviceRCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = serviceRCell.m; path = ../../serviceRCell.m; sourceTree = "<group>"; };
 		52DEAA161C88152400903A86 /* ServiceRequestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceRequestTableViewCell.h; sourceTree = "<group>"; };
 		52DEAA171C88152400903A86 /* ServiceRequestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceRequestTableViewCell.m; sourceTree = "<group>"; };
-		52DEAA191C88153100903A86 /* ServiceRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceRequestViewController.h; sourceTree = "<group>"; };
-		52DEAA1A1C88153100903A86 /* ServiceRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceRequestViewController.m; sourceTree = "<group>"; };
 		52DEAA1C1C886A0B00903A86 /* no-photo-rest-i5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no-photo-rest-i5.png"; sourceTree = "<group>"; };
 		52DEAA1D1C886A0B00903A86 /* no-photo-rest-i6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no-photo-rest-i6.png"; sourceTree = "<group>"; };
 		52E8EA011C57B9C900D59716 /* USAStatesNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = USAStatesNames.txt; sourceTree = "<group>"; };
@@ -1187,8 +1187,8 @@
 				83B211EB1C2C260200CD1815 /* RestaurantMenuViewController.m */,
 				830BD9BB1C3E0D3900CFE8AB /* pagerChildViewController.h */,
 				830BD9BC1C3E0D3A00CFE8AB /* pagerChildViewController.m */,
-				52DEAA191C88153100903A86 /* ServiceRequestViewController.h */,
-				52DEAA1A1C88153100903A86 /* ServiceRequestViewController.m */,
+				2E8439721C9FF91000D6490A /* ServiceRequestViewController.h */,
+				2E8439731C9FF91100D6490A /* ServiceRequestViewController.m */,
 				526071341C60E05000D38704 /* PayBillViewController.h */,
 				526071351C60E05000D38704 /* PayBillViewController.m */,
 				526071541C6C9ED300D38704 /* HistoryViewController.h */,
@@ -1264,11 +1264,11 @@
 				8321E8051C3C0CBE0095C3D7 /* CustomIOSAlertView.h */,
 				8321E8061C3C0CBE0095C3D7 /* CustomIOSAlertView.m */,
 				83B3D3031C2296140045412F /* RestaurantTableViewCell.h */,
-				8321E7F51C3C03560095C3D7 /* barcodeView.h */,
 				83B3D3041C2296140045412F /* RestaurantTableViewCell.m */,
-				529917D21C856D30009138F1 /* CardPaymentTableViewCell.m */,
-				8321E7F61C3C03560095C3D7 /* barcodeView.m */,
 				529917D11C856D30009138F1 /* CardPaymentTableViewCell.h */,
+				529917D21C856D30009138F1 /* CardPaymentTableViewCell.m */,
+				8321E7F51C3C03560095C3D7 /* barcodeView.h */,
+				8321E7F61C3C03560095C3D7 /* barcodeView.m */,
 				838904B71C41058100EB721E /* DishesTableViewCell.h */,
 				838904B81C41058100EB721E /* DishesTableViewCell.m */,
 				52DEAA161C88152400903A86 /* ServiceRequestTableViewCell.h */,
@@ -1997,7 +1997,6 @@
 				83D649631C32BE2B00E413D6 /* RapidzzNetworkEngine.m in Sources */,
 				529917D31C856D30009138F1 /* CardPaymentTableViewCell.m in Sources */,
 				A8AABD031C5A2F2000723DF8 /* resturantLoginViewController.m in Sources */,
-				52DEAA1B1C88153100903A86 /* ServiceRequestViewController.m in Sources */,
 				8336C14E1C20191D002E1343 /* ViewController.m in Sources */,
 				83D6494F1C32BC1D00E413D6 /* NSMutableArray+STKAudioPlayer.m in Sources */,
 				83D649591C32BC1D00E413D6 /* NSDictionary+Utility.m in Sources */,
@@ -2030,6 +2029,7 @@
 				526071361C60E05000D38704 /* PayBillViewController.m in Sources */,
 				524E9CE21C942EE600216A5A /* menuSliderTableViewCell.m in Sources */,
 				83D649511C32BC1D00E413D6 /* STKAutoRecoveringHTTPDataSource.m in Sources */,
+				2E8439741C9FF91100D6490A /* ServiceRequestViewController.m in Sources */,
 				52DEAA181C88152400903A86 /* ServiceRequestTableViewCell.m in Sources */,
 				83B3D3051C2296140045412F /* RestaurantTableViewCell.m in Sources */,
 				83D649401C32BC1D00E413D6 /* NSData+GIF.m in Sources */,
@@ -2219,8 +2219,8 @@
 			baseConfigurationReference = 938AECA273D635A278C5ECB5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Abdul Khan (5JEZ3ML6S2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Abdul Khan (5JEZ3ML6S2)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2248,8 +2248,8 @@
 			baseConfigurationReference = DEE934F0946A1DCBF39F826C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Abdul Khan (34VL7Q74FC)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Abdul Khan (34VL7Q74FC)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

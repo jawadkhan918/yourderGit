@@ -10,7 +10,7 @@
 
 @interface TableOrdersTableViewCell : UITableViewCell
 
-@property (weak,nonatomic) IBOutlet UILabel *lblName;
+@property (weak,nonatomic) IBOutlet UILabel *lblTime;
 @property (weak,nonatomic) IBOutlet UILabel *lblTableNo;
 @property (weak,nonatomic) IBOutlet UILabel *lblDishName;
 

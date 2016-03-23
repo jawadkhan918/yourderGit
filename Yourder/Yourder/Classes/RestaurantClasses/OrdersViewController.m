@@ -9,10 +9,12 @@
 #import "OrdersViewController.h"
 #import "TableOrdersTableViewCell.h"
 #import "SWRevealViewController.h"
+#import "UserOrderViewController.h"
 
 @interface OrdersViewController ()
 {
     NSMutableArray *arrOrderList;
+    NSIndexPath *indexRefference;
 }
 
 @end
@@ -54,19 +56,7 @@
     
     if([[manager.data objectForKey:@"status"] integerValue] == 0)
     {
-        NSArray *arrData = [manager.data objectForKey:@"data"];
-        
-        for(int i=0;i<arrData.count;i++)
-        {
-            if([[[arrData objectAtIndex:i]objectForKey:@"user_info"] integerValue] > 0)
-            {
-                for(int j=0;j<[[[arrData objectAtIndex:i] objectForKey:@"user_info"] integerValue];j++)
-                {
-                    [arrOrderList addObject:[arrData objectAtIndex:j]];
-                }
-            }
-        }
-        
+        arrOrderList = [manager.data objectForKey:@"data"];
         [self.tblOrders reloadData];
        // [self back:self];
     }
@@ -81,7 +71,6 @@
 {
     [MBProgressHUD hideHUDForView:self.view animated:YES];
     NSLog(@"failed");
-    
 }
 
 
@@ -113,15 +102,18 @@
     
     if (arrOrderList.count > 0)
     {
-        NSDictionary *dict = [arrOrderList objectAtIndex:indexPath.row];
-        if ([[dict objectForKey:@"user_info"] count] > 0)
-        {
-            
-      //  cell.lblDishName.text = [dict objectForKey:@"items_name"]];
-        //cell.lblTableNo.text = ;
-        cell.lblName.text = [dict objectForKey:@"login_name"];
-
-        }
+        
+            NSDictionary *dict = [arrOrderList objectAtIndex:indexPath.row];
+            // NSDictionary *dicData = [dict objectForKey:@"order_detail"];
+            cell.lblDishName.text = [dict objectForKey:@"item_name"];
+            cell.lblTableNo.text = [dict objectForKey:@"table_number"];
+            NSString *strTime = [dict objectForKey:@"detail_datetime"];
+            cell.lblTime.text = @"";
+            for (int i = 11; i < [strTime length]-3;++i)
+            {
+                NSString *theCharacter = [NSString stringWithFormat:@"%c", [strTime characterAtIndex:i]];
+                cell.lblTime.text = [cell.lblTime.text stringByAppendingString:theCharacter];
+            }
     }
     
     
@@ -131,24 +123,24 @@
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    //cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    
-    
-//    
-//    if(cell.accessoryType == UITableViewCellAccessoryNone)
-//    {
-//        [arrSelectTables addObject:[self.arrTablesList objectAtIndex:indexPath.row]];
-//        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-//    }
-//    else
-//    {
-//        [arrSelectTables removeObject:[self.arrTablesList objectAtIndex:indexPath.row]];
-//        cell.accessoryType = UITableViewCellAccessoryNone;
-//    }
+    indexRefference = indexPath;
+    [self performSegueWithIdentifier:@"showUserOrders" sender:self];
     
     
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"showUserOrders"])
+    {
+        // Get reference to the destination view controller
+        UserOrderViewController *vc = [segue destinationViewController];
+        vc.dictSelectedUserInfo = [arrOrderList objectAtIndex:indexRefference.row];
+        // Pass any objects to the view controller here, like...
+        NSLog(@"add dat");
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

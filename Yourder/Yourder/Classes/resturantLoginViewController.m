@@ -32,8 +32,6 @@
     UIColor *color = [UIColor whiteColor];
     self.txtUserName.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.txtUserName.placeholder attributes:@{NSForegroundColorAttributeName: color}];
      self.txtPassword.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.txtPassword.placeholder attributes:@{NSForegroundColorAttributeName: color}];
-    
-
    
 }
 -(IBAction)btnLogin:(id)sender
@@ -65,6 +63,7 @@
         [AppDelegate singleton].dictLogedInRestaurantInfo = dictResult;
         [AppDelegate singleton].Waiter_Name = [manager.data objectForKey:@"staff_name"];
         [self performSegueWithIdentifier:@"WaiterDetailVC" sender:self];
+        [self registerUserForPushNotification];
     }
     else
     {
@@ -108,6 +107,28 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+// REGISTER FOR NOTIFICATION
+
+-(void)registerUserForPushNotification
+{
+    
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    //[currentInstallation setObject:[PFUser currentUser] forKey:@"User"];
+    [currentInstallation setDeviceTokenFromData:[[NSUserDefaults standardUserDefaults] valueForKey:@"deviceToken"]];
+    [currentInstallation setValue:[NSString stringWithFormat:@"%@@%@.com",[dictResult objectForKey:@"staff_name"],[dictResult objectForKey:@"rest_name"]] forKey:@"email"];
+    [currentInstallation setValue:[dictResult objectForKey:@"staff_name"] forKey:@"username"];
+    
+    currentInstallation.channels = @[@"global"];
+    [currentInstallation saveInBackground];
+    
+}
+
+
+
+
+
+
 /*
 #pragma mark - Navigation
 

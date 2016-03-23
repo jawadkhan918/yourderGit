@@ -11,6 +11,12 @@
 @interface UserOrderTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *order_name;
 @property (weak, nonatomic) IBOutlet UILabel *des_name;
+@property (weak, nonatomic) IBOutlet UIButton *btnServed;
+@property (weak, nonatomic) IBOutlet UIButton *btnDelete;
+@property (weak, nonatomic) IBOutlet UIImageView *imgServed;
+@property (weak, nonatomic) IBOutlet UIImageView *imgDelete;
+
+
 
 @property (weak, nonatomic) IBOutlet UIButton *count_img;
 

@@ -178,6 +178,7 @@
     //[AppDelegate singleton].totalAmount = [self.lblTotalAmount.text floatValue];
     delegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     delegate.totalBillAmount = [[manager.data objectForKey:@"total_price"] floatValue];
+    [self sendPushNotification];
 }
 
 -(void) DidOrderPlacedToKitchenFailed:(RapidzzBaseManager *)manager error:(RapidzzError *)error
@@ -204,7 +205,6 @@
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSDictionary *dictParams = @{@"detail_id":[NSString stringWithFormat:@"%d",detail_id]
                                  };
-    
     self.manager = [[RapidzzUserManager alloc] init];
     self.manager.delegate = self;
     [self.manager removeDishFromOrder:dictParams];
@@ -231,7 +231,6 @@
     {
         self.lblTotalAmount.text = @"00.00";
     }
-    
 }
 
 -(void) DidRemoveFromOrderFailed:(RapidzzBaseManager *)manager error:(RapidzzError *)error
@@ -241,101 +240,30 @@
 }
 
 
+// SEND PUSH NOTIFICATION FOR WAITER
 
-/*
-#pragma mark SAVE ORDER
--(IBAction)placeOrder:(id)sender
+//SEND SPLIT NOTIFICATION TO USER
+-(void) sendPushNotification
 {
-    [self saveOrder];
-}
-
-// SAVE ORDER MASTER DETAIL
--(void) saveOrder
-{
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSDictionary *dictParams = @{@"rest_id":[[AppDelegate singleton].dictSelectedRestaurant objectForKey:@"rest_id"]
-                                 ,@"login_id":[[AppDelegate singleton].userInfo objectForKey:@"login_id"]
-                                 ,@"order_totalbill":self.lblTotalAmount.text
-                                 ,@"order_status":@"0"
-                                 ,@"barcode_value":[AppDelegate singleton].userTableBarcode
-                                 };
+    NSDictionary *data = @{@"badge" : @"Increment",
+                           @"content-available" : @"1",
+                           @"alert":@"Order Received From Table # 4"
+                           };
     
-    self.manager = [[RapidzzUserManager alloc] init];
-    self.manager.delegate = self;
-    [self.manager saveOrder:dictParams];
-}
-
--(void) didAddOrderSuccessfully:(RapidzzBaseManager *)manager
-{
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-    NSString *order_id = [manager.data objectForKey:@"order_id"];
-    [self saveOrderDetail:order_id];
-    [[AppDelegate singleton] showAlertwith:nil andMessage:@"Order placed successfully"];
-    [AppDelegate singleton].totalAmount = [self.lblTotalAmount.text floatValue];
-}
-
--(void) didAddOrderFailed:(RapidzzBaseManager *)manager error:(RapidzzError *)error
-{
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-}
-
-
-// SAVE ORDER DETAIL (DISHES DETAIL)
--(void) saveOrderDetail: (NSString *) orderID
-{
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSDictionary *dictDetail;
-    for (int i = 0; i<[AppDelegate singleton].arrCurrOrder.count; i++)
-    {
-        dictDetail = [[AppDelegate singleton].arrCurrOrder objectAtIndex:i];
-        NSDictionary *dictParams = @{@"order_id":orderID
-                                     ,@"cat_id":[dictDetail objectForKey:@"cat_id"]
-                                     ,@"dish_id":[dictDetail objectForKey:@"items_id"]
-                                     ,@"detail_quantity":[dictDetail objectForKey:@"quantity"]
-                                     ,@"detail_status":@"0"
-                                     ,@"detail_datetime":@"01-01-2016 00:00:00"
-                                     ,@"comments":[dictDetail objectForKey:@"comments"]
-                                     ,@"splitwith":[dictDetail objectForKey:@"splitwith"]
-                                     };
-        self.manager = [[RapidzzUserManager alloc] init];
-        self.manager.delegate = self;
-        [self.manager addOrderDetail:dictParams];
-    }
+    NSString *receiverEmail = [NSString stringWithFormat:@"%@@%@.com",[AppDelegate singleton].table_waiter,[[AppDelegate singleton].dictSelectedRestaurant objectForKey:@"rest_name"]];
+    PFQuery *pushQuery = [PFInstallation query];
+    [pushQuery whereKey:@"email" equalTo:receiverEmail];
     
-    if ([AppDelegate singleton].arrPlacedOrder.count > 0)
-    {
-        for (int i = 0; i<[AppDelegate singleton].arrCurrOrder.count; i++)
-        {
-            [[AppDelegate singleton].arrPlacedOrder addObject:[[AppDelegate singleton].arrCurrOrder objectAtIndex:i]];
-        }
-    }
-    else
-    {
-        [AppDelegate singleton].arrPlacedOrder = [[NSMutableArray alloc] initWithArray:(NSArray *)[AppDelegate singleton].arrCurrOrder];
-    }
-    [[AppDelegate singleton].arrCurrOrder removeAllObjects];
+    // Send push notification to query
+    PFPush *push = [[PFPush alloc] init];
+    [push setQuery:pushQuery]; // This line for send to specific user
     
+    [push setData:data];
+    [push sendPushInBackground];
 }
 
--(void) didAddOrderDetailSuccessfully:(RapidzzBaseManager *)manager
-{
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-    if ([[self.manager.data objectForKey:@"status"] intValue] == 0)
-    {
-        //[AppDelegate singleton].arrPlacedOrder = [AppDelegate singleton].arrCurrOrder;
-        
-    }
-    else
-    {
-        [[AppDelegate singleton] showAlertwith:nil andMessage:[manager.data objectForKey:@"message"]];
-    }
-}
 
--(void) didAddOrderDetailFailed:(RapidzzBaseManager *)manager error:(RapidzzError *)error
-{
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-}
-*/
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

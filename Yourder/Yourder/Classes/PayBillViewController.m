@@ -216,7 +216,7 @@
 -(void)DidFailToPayAmount:(RapidzzBaseManager *)manager error:(RapidzzError *)error
 {
     NSLog(@"unsuccessfull");
-    //[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 
@@ -447,17 +447,19 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)dropInViewControllerDidCancel:(__unused BTDropInViewController *)viewController {
+- (void)dropInViewControllerDidCancel:(__unused BTDropInViewController *)viewController
+{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
-- (void)postNonceToServer:(NSString *)paymentMethodNonce {
+- (void)postNonceToServer:(NSString *)paymentMethodNonce
+{
     // Update URL with your server
     [MBProgressHUD showHUDAddedTo:self.view  animated:YES];
     NSDictionary *dictRequest = @{
                                   @"payment_method_nonce":paymentMethodNonce
-                                  ,@"amount":@"50"
+                                  ,@"amount":[NSString stringWithFormat:@"%f", totalAmount] //@"amount":@"50"
                                   ,@"rest_id":[[AppDelegate singleton].dictSelectedRestaurant objectForKey:@"rest_id"]};
     
     self.manager = [[RapidzzUserManager alloc]init];
@@ -467,13 +469,14 @@
 
 -(void)DidGetPaymentStatusSuccessfully:(RapidzzBaseManager *)manager
 {
-    
+    [MBProgressHUD hideHUDForView:self.view  animated:YES];
     NSLog(@"successfull %@",manager.data);
     [self PaypalButtonClicked];
 }
 
 -(void)DidFailToGetPaymentStatus:(RapidzzBaseManager *)manager error:(RapidzzError *)error
 {
+    [MBProgressHUD hideHUDForView:self.view  animated:YES];
     NSLog(@"failed");
 }
 

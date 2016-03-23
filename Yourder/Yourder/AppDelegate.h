@@ -43,6 +43,8 @@
 @property (strong, nonatomic) NSString *Rest_key;
 @property (strong, nonatomic) NSString *User_id;
 @property (strong, nonatomic) NSString *Waiter_Name;
+@property (strong, nonatomic) NSString *table_waiter;
+
 @property (strong ,nonatomic) NSMutableArray *arrSelectedTabels;
 
 

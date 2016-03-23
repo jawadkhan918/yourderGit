@@ -134,7 +134,7 @@
     // Store the deviceToken in the current installation and save it to Parse.
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     //[currentInstallation setValue:@"abdulkarim.khan@hotmail.com" forKey:@"email"];
-    //[currentInstallation setValue:@"abdul karim khan" forKey:@"username"];
+    //[cur`rentInstallation setValue:@"abdul karim khan" forKey:@"username"];
     
     [currentInstallation setDeviceTokenFromData:deviceToken];
     [currentInstallation saveInBackground];
@@ -143,6 +143,8 @@
 
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
+    //[PFPush handlePush:userInfo];
+    /*
     if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateInactive ||
         [[UIApplication sharedApplication] applicationState] == UIApplicationStateBackground)
     {
@@ -152,6 +154,7 @@
     {
         [self SplitNotification:userInfo];
     }
+    */
     
 }
 
