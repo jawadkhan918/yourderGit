@@ -1,22 +1,21 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1A445BE06070F1596A8B18B5511476F8B3200A50",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
     "183091da-13f0-43dd-91fc-e5756fb5d005++9467" : {
 
     }
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "1A445BE06070F1596A8B18B5511476F8B3200A50" : 0,
-    "183091da-13f0-43dd-91fc-e5756fb5d005++9467" : 0
+    "183091da-13f0-43dd-91fc-e5756fb5d005++9467" : 0,
+    "1A445BE06070F1596A8B18B5511476F8B3200A50" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DADA6AF4-CC63-457D-A47E-0FF8F1CA7BCE",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "1A445BE06070F1596A8B18B5511476F8B3200A50" : "yourderGit\/",
-    "183091da-13f0-43dd-91fc-e5756fb5d005++9467" : "yourderGit\/Yourder\/Yourder\/Mis\/TPKeyboard\/"
+    "183091da-13f0-43dd-91fc-e5756fb5d005++9467" : "Yourder\/Yourder\/Mis\/TPKeyboard\/",
+    "1A445BE06070F1596A8B18B5511476F8B3200A50" : ""
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Yourder",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Yourder\/Yourder.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Yourder.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/brians.unfuddle.com\/svn\/brians_chatfire",
@@ -24,7 +23,7 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "183091da-13f0-43dd-91fc-e5756fb5d005++9467"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jawadkhan918\/yourderGit",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jawadkhan918\/yourderGit.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1A445BE06070F1596A8B18B5511476F8B3200A50"
     }

@@ -114,7 +114,6 @@
 		5283B56A1C7C7A0500AA39EA /* close-notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 5283B5691C7C7A0500AA39EA /* close-notification.png */; };
 		5283B56C1C7C9DE700AA39EA /* icon-person-notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 5283B56B1C7C9DE700AA39EA /* icon-person-notification.png */; };
 		5283B5701C7EE3AD00AA39EA /* btn-pay-now2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5283B56F1C7EE3AD00AA39EA /* btn-pay-now2.png */; };
-		529029311C90078600008D94 /* StoryboardiPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529029301C90078600008D94 /* StoryboardiPad.storyboard */; };
 		529029351C9054F300008D94 /* unfilled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 529029341C9054F300008D94 /* unfilled@2x.png */; };
 		529029371C90550200008D94 /* unfilled@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 529029361C90550200008D94 /* unfilled@3x.png */; };
 		529917CA1C81F344009138F1 /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 529917C91C81F344009138F1 /* PaymentViewController.m */; };
@@ -251,6 +250,7 @@
 		83B211E91C2ACB7D00CD1815 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B211E81C2ACB7D00CD1815 /* QuartzCore.framework */; };
 		83B211EC1C2C260200CD1815 /* RestaurantMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B211EB1C2C260200CD1815 /* RestaurantMenuViewController.m */; };
 		83B3D3051C2296140045412F /* RestaurantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B3D3041C2296140045412F /* RestaurantTableViewCell.m */; };
+		83C891931CA287B100FB44E6 /* StoryboardiPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C891921CA287B100FB44E6 /* StoryboardiPad.storyboard */; };
 		83CAA6BC1C75BDC60007D533 /* SplitNotificationPopupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA6BB1C75BDC60007D533 /* SplitNotificationPopupVC.m */; };
 		83D648C01C32A9DB00E413D6 /* bg-yourder-login.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D648BF1C32A9DB00E413D6 /* bg-yourder-login.png */; };
 		83D648C21C32AA9100E413D6 /* bg-yourder-login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D648C11C32AA9100E413D6 /* bg-yourder-login@2x.png */; };
@@ -474,7 +474,6 @@
 		5283B5691C7C7A0500AA39EA /* close-notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-notification.png"; sourceTree = "<group>"; };
 		5283B56B1C7C9DE700AA39EA /* icon-person-notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-person-notification.png"; sourceTree = "<group>"; };
 		5283B56F1C7EE3AD00AA39EA /* btn-pay-now2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-pay-now2.png"; sourceTree = "<group>"; };
-		529029301C90078600008D94 /* StoryboardiPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StoryboardiPad.storyboard; path = ../../StoryboardiPad.storyboard; sourceTree = "<group>"; };
 		529029341C9054F300008D94 /* unfilled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unfilled@2x.png"; sourceTree = "<group>"; };
 		529029361C90550200008D94 /* unfilled@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unfilled@3x.png"; sourceTree = "<group>"; };
 		529917C81C81F344009138F1 /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
@@ -639,6 +638,7 @@
 		83B211EB1C2C260200CD1815 /* RestaurantMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantMenuViewController.m; sourceTree = "<group>"; };
 		83B3D3031C2296140045412F /* RestaurantTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantTableViewCell.h; sourceTree = "<group>"; };
 		83B3D3041C2296140045412F /* RestaurantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantTableViewCell.m; sourceTree = "<group>"; };
+		83C891921CA287B100FB44E6 /* StoryboardiPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardiPad.storyboard; sourceTree = "<group>"; };
 		83CAA6BA1C75BDC60007D533 /* SplitNotificationPopupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitNotificationPopupVC.h; sourceTree = "<group>"; };
 		83CAA6BB1C75BDC60007D533 /* SplitNotificationPopupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitNotificationPopupVC.m; sourceTree = "<group>"; };
 		83D648BF1C32A9DB00E413D6 /* bg-yourder-login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-yourder-login.png"; sourceTree = "<group>"; };
@@ -1017,12 +1017,12 @@
 		8321E7F21C3C01BB0095C3D7 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				83C891921CA287B100FB44E6 /* StoryboardiPad.storyboard */,
 				8336C14F1C20191D002E1343 /* Main.storyboard */,
 				526071411C634D1D00D38704 /* PlaceOrderpopup.xib */,
 				8321E7F31C3C02C70095C3D7 /* barcode.xib */,
 				83AE4FFB1C48C2A50047ECB4 /* Yourderpopup.xib */,
 				525C40651C53682B003C8F72 /* YourderPopupCell.xib */,
-				529029301C90078600008D94 /* StoryboardiPad.storyboard */,
 			);
 			name = Storyboard;
 			path = ../Storyboard;
@@ -1787,6 +1787,7 @@
 				A8AABD001C5A2EB100723DF8 /* line-white-40.png in Resources */,
 				5260715B1C6CD86A00D38704 /* bg-history-item.png in Resources */,
 				8321E8101C3D0ADA0095C3D7 /* bg-menu-item.png in Resources */,
+				83C891931CA287B100FB44E6 /* StoryboardiPad.storyboard in Resources */,
 				5260714D1C68AC4A00D38704 /* bg-side-price-2.png in Resources */,
 				8336C1961C205430002E1343 /* LICENSE.txt in Resources */,
 				520C119E1C747ADA005B815F /* star_unfilled@3x.png in Resources */,
@@ -1869,7 +1870,6 @@
 				83EF96301C3AE17A0013F89F /* btn-dine.png in Resources */,
 				520C11881C7463C7005B815F /* btn-grey-1.png in Resources */,
 				8336C1511C20191D002E1343 /* Main.storyboard in Resources */,
-				529029311C90078600008D94 /* StoryboardiPad.storyboard in Resources */,
 				529029351C9054F300008D94 /* unfilled@2x.png in Resources */,
 				832EE3541C28942400DECB01 /* barcode@2x.png in Resources */,
 				83297B2E1C3163B900125EE7 /* login-facebook@2x.png in Resources */,
