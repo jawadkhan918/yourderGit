@@ -53,6 +53,9 @@
 		5237AEB01C8041B100FA7BC8 /* SplitDetailPopupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5237AEAF1C8041B100FA7BC8 /* SplitDetailPopupCell.m */; };
 		5237AEB21C80ABBF00FA7BC8 /* btn-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 5237AEB11C80ABBF00FA7BC8 /* btn-red.png */; };
 		524E9CE21C942EE600216A5A /* menuSliderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 524E9CE11C942EE600216A5A /* menuSliderTableViewCell.m */; };
+		5251D4B61CA2B30A00DED6E6 /* StoryboardiPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5251D4B51CA2B30A00DED6E6 /* StoryboardiPad.storyboard */; };
+		5251D4B81CA2E7AE00DED6E6 /* icon-location.png in Resources */ = {isa = PBXBuildFile; fileRef = 5251D4B71CA2E7AE00DED6E6 /* icon-location.png */; };
+		5251D4BA1CA2E8F000DED6E6 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 5251D4B91CA2E8F000DED6E6 /* location.png */; };
 		525C40661C53682B003C8F72 /* YourderPopupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525C40651C53682B003C8F72 /* YourderPopupCell.xib */; };
 		526070FB1C5CD10200D38704 /* bg-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 526070E31C5CD10200D38704 /* bg-btn.png */; };
 		526070FC1C5CD10200D38704 /* bg-sideMenu-bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 526070E41C5CD10200D38704 /* bg-sideMenu-bottom.png */; };
@@ -250,7 +253,6 @@
 		83B211E91C2ACB7D00CD1815 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B211E81C2ACB7D00CD1815 /* QuartzCore.framework */; };
 		83B211EC1C2C260200CD1815 /* RestaurantMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B211EB1C2C260200CD1815 /* RestaurantMenuViewController.m */; };
 		83B3D3051C2296140045412F /* RestaurantTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B3D3041C2296140045412F /* RestaurantTableViewCell.m */; };
-		83C891931CA287B100FB44E6 /* StoryboardiPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C891921CA287B100FB44E6 /* StoryboardiPad.storyboard */; };
 		83CAA6BC1C75BDC60007D533 /* SplitNotificationPopupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CAA6BB1C75BDC60007D533 /* SplitNotificationPopupVC.m */; };
 		83D648C01C32A9DB00E413D6 /* bg-yourder-login.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D648BF1C32A9DB00E413D6 /* bg-yourder-login.png */; };
 		83D648C21C32AA9100E413D6 /* bg-yourder-login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83D648C11C32AA9100E413D6 /* bg-yourder-login@2x.png */; };
@@ -396,6 +398,9 @@
 		5237AEB11C80ABBF00FA7BC8 /* btn-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-red.png"; sourceTree = "<group>"; };
 		524E9CE01C942EE600216A5A /* menuSliderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menuSliderTableViewCell.h; sourceTree = "<group>"; };
 		524E9CE11C942EE600216A5A /* menuSliderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = menuSliderTableViewCell.m; sourceTree = "<group>"; };
+		5251D4B51CA2B30A00DED6E6 /* StoryboardiPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardiPad.storyboard; sourceTree = "<group>"; };
+		5251D4B71CA2E7AE00DED6E6 /* icon-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-location.png"; sourceTree = "<group>"; };
+		5251D4B91CA2E8F000DED6E6 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
 		525C40651C53682B003C8F72 /* YourderPopupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YourderPopupCell.xib; sourceTree = "<group>"; };
 		526070E31C5CD10200D38704 /* bg-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-btn.png"; sourceTree = "<group>"; };
 		526070E41C5CD10200D38704 /* bg-sideMenu-bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-sideMenu-bottom.png"; sourceTree = "<group>"; };
@@ -638,7 +643,6 @@
 		83B211EB1C2C260200CD1815 /* RestaurantMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantMenuViewController.m; sourceTree = "<group>"; };
 		83B3D3031C2296140045412F /* RestaurantTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantTableViewCell.h; sourceTree = "<group>"; };
 		83B3D3041C2296140045412F /* RestaurantTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantTableViewCell.m; sourceTree = "<group>"; };
-		83C891921CA287B100FB44E6 /* StoryboardiPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardiPad.storyboard; sourceTree = "<group>"; };
 		83CAA6BA1C75BDC60007D533 /* SplitNotificationPopupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitNotificationPopupVC.h; sourceTree = "<group>"; };
 		83CAA6BB1C75BDC60007D533 /* SplitNotificationPopupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitNotificationPopupVC.m; sourceTree = "<group>"; };
 		83D648BF1C32A9DB00E413D6 /* bg-yourder-login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-yourder-login.png"; sourceTree = "<group>"; };
@@ -772,6 +776,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8336C1A01C212D0A002E1343 /* CoreLocation.framework in Frameworks */,
 				52EF2F331C7377C000D56D0A /* libPods.a in Frameworks */,
 				52EF2F2E1C73563E00D56D0A /* ParseFacebookUtilsV4.framework in Frameworks */,
 				5260713C1C61082300D38704 /* Accelerate.framework in Frameworks */,
@@ -787,7 +792,6 @@
 				83B211E31C2ACB5F00CD1815 /* Foundation.framework in Frameworks */,
 				52EF2F341C7377D100D56D0A /* libCardIO.a in Frameworks */,
 				8336C1A21C212D1B002E1343 /* MapKit.framework in Frameworks */,
-				8336C1A01C212D0A002E1343 /* CoreLocation.framework in Frameworks */,
 				52EF2F351C7377D100D56D0A /* libopencv_core.a in Frameworks */,
 				8336C18B1C205430002E1343 /* Bolts.framework in Frameworks */,
 				8336C1921C205430002E1343 /* FBSDKCoreKit.framework in Frameworks */,
@@ -1017,7 +1021,7 @@
 		8321E7F21C3C01BB0095C3D7 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				83C891921CA287B100FB44E6 /* StoryboardiPad.storyboard */,
+				5251D4B51CA2B30A00DED6E6 /* StoryboardiPad.storyboard */,
 				8336C14F1C20191D002E1343 /* Main.storyboard */,
 				526071411C634D1D00D38704 /* PlaceOrderpopup.xib */,
 				8321E7F31C3C02C70095C3D7 /* barcode.xib */,
@@ -1322,7 +1326,9 @@
 				83EF962E1C3AE1610013F89F /* DetailScreen */,
 				83161EE61C34EBFE002C2883 /* ListingScreen */,
 				83D648C91C32B68500E413D6 /* login-retaurant.png */,
+				5251D4B71CA2E7AE00DED6E6 /* icon-location.png */,
 				83AE4FE41C48A4250047ECB4 /* back-arrow.png */,
+				5251D4B91CA2E8F000DED6E6 /* location.png */,
 				5260715C1C6DA98900D38704 /* line-red.png */,
 				838904BA1C41301F00EB721E /* line.png */,
 				8395E7371C381DA600AB46DC /* icon-arrow-grey.png */,
@@ -1785,9 +1791,10 @@
 				83D648C01C32A9DB00E413D6 /* bg-yourder-login.png in Resources */,
 				83161EF21C354887002C2883 /* icon-arrow-red.png in Resources */,
 				A8AABD001C5A2EB100723DF8 /* line-white-40.png in Resources */,
+				5251D4BA1CA2E8F000DED6E6 /* location.png in Resources */,
 				5260715B1C6CD86A00D38704 /* bg-history-item.png in Resources */,
 				8321E8101C3D0ADA0095C3D7 /* bg-menu-item.png in Resources */,
-				83C891931CA287B100FB44E6 /* StoryboardiPad.storyboard in Resources */,
+				5251D4B61CA2B30A00DED6E6 /* StoryboardiPad.storyboard in Resources */,
 				5260714D1C68AC4A00D38704 /* bg-side-price-2.png in Resources */,
 				8336C1961C205430002E1343 /* LICENSE.txt in Resources */,
 				520C119E1C747ADA005B815F /* star_unfilled@3x.png in Resources */,
@@ -1865,6 +1872,7 @@
 				526071781C6F040900D38704 /* icon-people-02.png in Resources */,
 				2E89D9BB1C4F678E00EC3DD7 /* icon-people-02.png in Resources */,
 				83D648C51C32AEF800E413D6 /* splash-screen-iphone@2x.png in Resources */,
+				5251D4B81CA2E7AE00DED6E6 /* icon-location.png in Resources */,
 				5260713E1C62068B00D38704 /* paypal.png in Resources */,
 				8395E73B1C385A6400AB46DC /* btn-list.png in Resources */,
 				83EF96301C3AE17A0013F89F /* btn-dine.png in Resources */,

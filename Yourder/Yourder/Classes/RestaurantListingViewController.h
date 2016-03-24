@@ -13,8 +13,10 @@
 #import "UIImageView+WebCache.h"
 #import "SWRevealViewController.h"
 #import "IQDropDownTextField.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface RestaurantListingViewController : UIViewController <CLLocationManagerDelegate, MKAnnotation, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate, RapidzzUserManagerDelegate, UISearchBarDelegate, UITextFieldDelegate>
+
+@interface RestaurantListingViewController : UIViewController < MKAnnotation, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate, RapidzzUserManagerDelegate, UISearchBarDelegate, UITextFieldDelegate,CLLocationManagerDelegate>
 
 @property (strong, nonatomic) NSMutableArray *arrRestaurants;
 @property (strong, nonatomic) NSMutableArray *arrSearchResturants;
@@ -23,7 +25,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *tblRestaurants;
 @property (strong, nonatomic) RapidzzUserManager *manager;
 //@property (weak, nonatomic) IBOutlet UISearchBar *txtSearch;
-@property (weak, nonatomic) IBOutlet UITextField *txtSearch;
+
+@property (weak, nonatomic) IBOutlet UILabel *txtSearch;
+
 
 @property (weak, nonatomic) IBOutlet UIView *filterView;
 @property (weak, nonatomic) IBOutlet UIButton *btnChangeView;
@@ -46,3 +50,4 @@
 
 
 @end
+NSString *city;
