@@ -2814,7 +2814,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="QEi-m2-YJv" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegue" id="UG8-wD-ckJ"/>
-                        <segue destination="JjC-Dd-79O" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegue" id="7Uc-6Q-1QV"/>
+                        <segue destination="FwC-jc-qiF" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegue" id="g7L-pt-FQk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPh-l8-nEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -5265,10 +5265,20 @@
             </objects>
             <point key="canvasLocation" x="4011" y="-634"/>
         </scene>
-        <!--View Controller-->
+        <!--Page View Controller-->
+        <scene sceneID="1jC-Ah-J95">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Lis-R7-zQ3" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qwQ-pN-1Se" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-408" y="-422"/>
+        </scene>
+        <!--Page Content View Controller-->
         <scene sceneID="xui-F6-o2K">
             <objects>
-                <viewController id="JkA-gw-RD4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PageContentViewController" id="JkA-gw-RD4" customClass="PageContentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AGa-fh-IfU"/>
                         <viewControllerLayoutGuide type="bottom" id="mgy-x1-u2i"/>
@@ -5276,12 +5286,83 @@
                     <view key="view" contentMode="scaleToFill" id="iRx-vs-Wrv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uyW-q8-Tdq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uyW-q8-Tdq" secondAttribute="height" multiplier="40:71" id="J36-W6-oZa"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUS-im-YJq">
+                                <rect key="frame" x="74" y="273" width="173" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rUS-im-YJq" secondAttribute="height" multiplier="173:21" id="wqf-UD-ZzU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xk-XR-xvQ">
+                                <rect key="frame" x="24" y="305" width="273" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rUS-im-YJq" secondAttribute="trailing" constant="73" id="2VF-6Y-fDL"/>
+                            <constraint firstItem="uyW-q8-Tdq" firstAttribute="leading" secondItem="iRx-vs-Wrv" secondAttribute="leading" id="Dfq-2S-IxJ"/>
+                            <constraint firstItem="8Xk-XR-xvQ" firstAttribute="leading" secondItem="iRx-vs-Wrv" secondAttribute="leading" constant="24" id="LcJ-h7-Aig"/>
+                            <constraint firstItem="rUS-im-YJq" firstAttribute="leading" secondItem="iRx-vs-Wrv" secondAttribute="leading" constant="74" id="PR6-ln-z5b"/>
+                            <constraint firstItem="uyW-q8-Tdq" firstAttribute="leading" secondItem="iRx-vs-Wrv" secondAttribute="leading" id="RIs-Ub-kV2"/>
+                            <constraint firstAttribute="trailing" secondItem="8Xk-XR-xvQ" secondAttribute="trailing" constant="23" id="X2X-XQ-o06"/>
+                            <constraint firstItem="uyW-q8-Tdq" firstAttribute="top" secondItem="iRx-vs-Wrv" secondAttribute="top" id="aBd-Vw-aVU"/>
+                            <constraint firstAttribute="trailing" secondItem="uyW-q8-Tdq" secondAttribute="trailing" id="cm8-E5-zLs"/>
+                            <constraint firstItem="mgy-x1-u2i" firstAttribute="top" secondItem="uyW-q8-Tdq" secondAttribute="bottom" id="nst-f9-Vhb"/>
+                            <constraint firstItem="uyW-q8-Tdq" firstAttribute="bottom" secondItem="mgy-x1-u2i" secondAttribute="top" id="oWE-x6-RyQ"/>
+                            <constraint firstItem="rUS-im-YJq" firstAttribute="top" secondItem="AGa-fh-IfU" secondAttribute="bottom" constant="253" id="tjd-ON-nNS"/>
+                            <constraint firstAttribute="trailing" secondItem="uyW-q8-Tdq" secondAttribute="trailing" id="v7u-mx-XQA"/>
+                            <constraint firstItem="uyW-q8-Tdq" firstAttribute="top" secondItem="iRx-vs-Wrv" secondAttribute="top" id="w0n-h7-WiR"/>
+                            <constraint firstItem="8Xk-XR-xvQ" firstAttribute="top" secondItem="rUS-im-YJq" secondAttribute="bottom" constant="11" id="wr8-Ee-4aI"/>
+                            <constraint firstItem="8Xk-XR-xvQ" firstAttribute="leading" secondItem="iRx-vs-Wrv" secondAttribute="leadingMargin" constant="8" id="xO0-EL-1Tp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Dfq-2S-IxJ"/>
+                                <exclude reference="xO0-EL-1Tp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="uyW-q8-Tdq" id="f6n-AO-tr6"/>
+                        <outlet property="lblSubTitle" destination="8Xk-XR-xvQ" id="cPH-qu-LEi"/>
+                        <outlet property="lblTitle" destination="rUS-im-YJq" id="5Ei-mM-SF0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XgM-Qu-67W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-408" y="252"/>
+        </scene>
+        <!--Page View-->
+        <scene sceneID="1QW-H0-A8n">
+            <objects>
+                <viewController storyboardIdentifier="pageView" id="FwC-jc-qiF" customClass="pageView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CK5-Ce-cqY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jx5-gN-Y7U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MQa-yz-Feu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XgM-Qu-67W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mh7-XF-ZQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="187" y="226"/>
         </scene>
         <!--splitNotificationPopup-->
         <scene sceneID="g5y-yl-Alj">
@@ -5698,12 +5779,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zdt-nh-dx1"/>
-        <segue reference="Q4l-mw-J4L"/>
+        <segue reference="ReP-IH-9Vp"/>
         <segue reference="sM2-NX-iHk"/>
         <segue reference="FCd-go-zqA"/>
         <segue reference="Ld3-mL-1xZ"/>
-        <segue reference="ReP-IH-9Vp"/>
-        <segue reference="OAh-el-Y67"/>
+        <segue reference="Q4l-mw-J4L"/>
         <segue reference="hUI-nj-TfX"/>
     </inferredMetricsTieBreakers>
 </document>
