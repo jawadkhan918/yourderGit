@@ -23,6 +23,7 @@
     UIView *footerView;
     NSString *strLat;
     NSString *strLong;
+     CLLocationManager *locationManager;
     
 
 }
@@ -38,7 +39,6 @@
     
     //FOR DROP DOWN
     
-
     
     arrCousine = [[NSArray alloc] initWithObjects:@"Chinese",@"Indian",@"Malay",@"Others", nil];
     
@@ -86,16 +86,17 @@
     
     // add Map
     //self.myMap = [[MKMapView alloc] initWithFrame:self.view.frame];
-    self.myMap = [[MKMapView alloc] initWithFrame:CGRectMake(0, 95, self.view.frame.size.width, self.view.frame.size.height)];
+    self.myMap = [[MKMapView alloc] initWithFrame:CGRectMake(0,60, self.view.frame.size.width, self.view.frame.size.height)];
     self.myMap.showsUserLocation = YES;
     [self.myMap setShowsUserLocation:YES];
     self.myMap.mapType = MKMapTypeStandard;
     self.myMap.delegate = self;
+   
     [self.view addSubview:self.myMap];
     self.myMap.hidden = YES;
     
     [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setDefaultTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    self.txtSearch.delegate = self;
+   // self.txtSearch.delegate = self;
     
     pageCount = 0;
     searchPageCount = 0;
@@ -130,10 +131,18 @@
     {
         loadMore.frame = CGRectMake(157,20, 100,30);
     }
+   
+    else if ([[UIScreen mainScreen] bounds].size.height == 1024)
+    {
+        loadMore.frame = CGRectMake(334,20, 100,30);
+    }
     
     [footerView addSubview:loadMore];
     
+    
+    
     self.tblRestaurants.tableFooterView = footerView;
+    
 }
 
 
@@ -195,10 +204,10 @@
      initWithString:@"ZipCode"
      attributes:@{NSForegroundColorAttributeName:whiteColor}];
     
-    self.txtSearch.attributedPlaceholder =
+    /*self.txtSearch.attributedPlaceholder =
     [[NSAttributedString alloc]
      initWithString:@" Search restaurant"
-     attributes:@{NSForegroundColorAttributeName:whiteColor}];
+     attributes:@{NSForegroundColorAttributeName:whiteColor}];*/
     
     
 }
@@ -247,7 +256,7 @@
     [self.view endEditing:YES];
 }
 
--(void) setUISearchField
+/*-(void) setUISearchField
 {
     for (UIView *subView in self.txtSearch.subviews)
     {
@@ -263,7 +272,7 @@
             }
         }
     }
-}
+}*/
 
 
 -(void) viewWillAppear:(BOOL)animated
@@ -345,6 +354,41 @@
     NSLog(@"using LocationManager:current location latitude = %f, longtitude = %f", self.locationManager.location.coordinate.latitude, self.locationManager.location.coordinate.longitude);
     strLat = [NSString stringWithFormat:@"%f",self.locationManager.location.coordinate.latitude];
     strLong = [NSString stringWithFormat:@"%f",self.locationManager.location.coordinate.longitude];
+    double lat = [strLat doubleValue];
+    double lon = [strLong doubleValue];
+    CLGeocoder *ceo = [[CLGeocoder alloc]init];
+    CLLocation *loc =  [[CLLocation alloc]initWithLatitude:lat longitude:lon]
+    ;
+    
+    
+    [ceo reverseGeocodeLocation:loc completionHandler:
+     ^(NSArray *placemarks, NSError *error) {
+         CLPlacemark *placemark = [placemarks objectAtIndex:0];
+         NSLog(@"placemark %@",placemark);
+         //String to hold address
+         
+         NSLog(@"addressDictionary %@", placemark.addressDictionary);
+         
+         NSLog(@"placemark %@",placemark.region);
+         NSLog(@"placemark %@",placemark.country);  // Give Country Name
+         NSLog(@"placemark %@",placemark.locality); // Extract the city name
+         NSLog(@"location %@",placemark.name);
+         
+         NSLog(@"location %@",placemark.ocean);
+         NSLog(@"location %@",placemark.postalCode);
+         NSLog(@"location %@",placemark.subLocality);
+         
+         
+         NSLog(@"location %@",placemark.location);
+         //Print the location to console
+         //NSLog(@"I am currently at %@",locatedAt);
+         
+         
+         self.txtSearch.text = placemark.locality;
+         
+         
+         
+     }];
     [self getRestaurantList];
 }
 
@@ -606,7 +650,7 @@
     self.filterView.hidden =NO;
     if (filterViewHidden == YES)
     {
-        self.myMap.frame = CGRectMake(0, 162, self.view.frame.size.width, self.view.frame.size.height);
+        self.myMap.frame = CGRectMake(0,120, self.view.frame.size.width, self.view.frame.size.height);
         [UIView animateWithDuration:0.5
                      animations:^{
                          self.filterView.alpha = 1;
@@ -615,7 +659,7 @@
     }
     else
     {
-        self.myMap.frame = CGRectMake(0, 99, self.view.frame.size.width, self.view.frame.size.height);
+        self.myMap.frame = CGRectMake(0,60, self.view.frame.size.width, self.view.frame.size.height);
         [UIView animateWithDuration:0.5
                          animations:^{
                              self.filterView.alpha = 0;
@@ -631,13 +675,17 @@
     {
         self.myMap.hidden = NO;
         self.tblRestaurants.hidden = YES;
+        self.btnChangeView.frame = CGRectMake(14,self.view.frame.size.height-158,90,36);
         [self.btnChangeView setImage:[UIImage imageNamed:@"btn-list"] forState:UIControlStateNormal];
+        [self.view addSubview:self.btnChangeView];
     }
     else
     {
         self.myMap.hidden = YES;
         self.tblRestaurants.hidden = NO;
+        self.btnChangeView.frame = CGRectMake(14,self.view.frame.size.height-158,90,36);
         [self.btnChangeView setImage:[UIImage imageNamed:@"btn-map"] forState:UIControlStateNormal];
+        [self.view addSubview:self.btnChangeView];
     }
 }
 
@@ -720,6 +768,22 @@
     filterViewHidden = YES;
     
 }
+
+
+
+
+-(void)getLocation:(float)lat lon:(float)lon{
+    
+    
+  
+    
+    
+    
+}
+
+
+// this delegate is called when the reversegeocoder fails to find a placemark
+
 
 
 /*
