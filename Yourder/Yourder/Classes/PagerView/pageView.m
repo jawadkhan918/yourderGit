@@ -1,10 +1,3 @@
-//
-//  pageView.m
-//  PageViewDemo
-//
-//  Created by Ghafar Tanveer on 24/11/2015.
-//  Copyright (c) 2015 Appcoda. All rights reserved.
-//
 
 #import "pageView.h"
 
@@ -131,7 +124,7 @@
 
 -(IBAction)btnLogin:(id)sender
 {
-    [self performSegueWithIdentifier:@"LoginViewController" sender:self];
+    [self performSegueWithIdentifier:@"loginViewController" sender:self];
 }
 -(IBAction)btnSignUp:(id)sender
 {
@@ -146,21 +139,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-//- (IBAction)startWalkthrough:(id)sender {
-//    PageContentViewController *startingViewController = [self viewControllerAtIndex:0];
-//    NSArray *viewControllers = @[startingViewController];
-//    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionReverse animated:NO completion:nil];
-//}
 
--(IBAction)signUp:(id)sender
-{
-    [self performSegueWithIdentifier:@"gotoSignUp" sender:self];
-}
-
--(IBAction)login:(id)sender
-{
-    [self performSegueWithIdentifier:@"gotoLogin" sender:self];
-}
 
 - (PageContentViewController *)viewControllerAtIndex:(NSUInteger)index
 {
@@ -220,10 +199,7 @@
     if(completed){
         
           PageContentViewController *enlarge =[self.pageViewController.viewControllers lastObject];
-        //        self.enlargePhotoPageControl.currentPage =  enlarge.pageIndex;
-        
-        //pagerChildViewController *pc;
-        //pageIndex =(int) [[self.arrCategories objectAtIndex:enlarge.index-1]objectForKey:@"cat_id"] ;
+       
         pageIndex = (int)enlarge.pageIndex;
     
         
@@ -261,14 +237,5 @@
 
 
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -88,6 +88,14 @@
     
     NSURL *logoImageURL = [NSURL URLWithString:[self.dictSelectedRestaurant objectForKey:@"rest_logo"]];
     [self.restLogo setImageWithURL:logoImageURL];
+    if ([[self.dictSelectedRestaurant objectForKey:@"rest_logo"] length] > 10)
+    {
+        [self.restLogo setImageWithURL:logoImageURL];
+    }
+    else
+    {
+        self.restLogo.image = [UIImage imageNamed:@"icon-table.png"];
+    }
     self.restLogo.layer.cornerRadius= self.restLogo.frame.size.width / 2;
     self.restLogo.layer.masksToBounds = YES;
     self.restLogo.clipsToBounds = YES;

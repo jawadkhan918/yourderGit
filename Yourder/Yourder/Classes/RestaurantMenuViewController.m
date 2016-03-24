@@ -233,7 +233,7 @@
     }
     else if ([[UIScreen mainScreen] bounds].size.height == 667)
     {
-        [[self.pageController view] setFrame:CGRectMake(0, 260, 375, 407)];
+        [[self.pageController view] setFrame:CGRectMake(0,83 , 375,585)];
     }
     else if ([[UIScreen mainScreen] bounds].size.height == 736)
     {

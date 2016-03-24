@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E58D2141CA44B060057E1FD /* item-overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E58D2131CA44B060057E1FD /* item-overlay.png */; };
+		2E58D2161CA44F6A0057E1FD /* icon-search-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E58D2151CA44F6A0057E1FD /* icon-search-red.png */; };
 		2E592C9F1C9AFC3E004FDFF0 /* OrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E592C9E1C9AFC3E004FDFF0 /* OrdersViewController.m */; };
 		2E592CA21C9B0128004FDFF0 /* TableOrdersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E592CA11C9B0128004FDFF0 /* TableOrdersTableViewCell.m */; };
 		2E5DFA9B1C414D270042A068 /* slidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFA981C414D270042A068 /* slidebarViewController.m */; };
@@ -348,6 +350,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E58D2131CA44B060057E1FD /* item-overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-overlay.png"; sourceTree = "<group>"; };
+		2E58D2151CA44F6A0057E1FD /* icon-search-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-search-red.png"; sourceTree = "<group>"; };
 		2E592C9D1C9AFC3E004FDFF0 /* OrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdersViewController.h; sourceTree = "<group>"; };
 		2E592C9E1C9AFC3E004FDFF0 /* OrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdersViewController.m; sourceTree = "<group>"; };
 		2E592CA01C9B0128004FDFF0 /* TableOrdersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableOrdersTableViewCell.h; sourceTree = "<group>"; };
@@ -1332,6 +1336,8 @@
 		83B3D3061C22B8A30045412F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2E58D2151CA44F6A0057E1FD /* icon-search-red.png */,
+				2E58D2131CA44B060057E1FD /* item-overlay.png */,
 				5283B56F1C7EE3AD00AA39EA /* btn-pay-now2.png */,
 				83939F361CA3E846008741DD /* bg-Yourder_login.png */,
 				83939F371CA3E846008741DD /* bg-yourder_login2.png */,
@@ -1808,9 +1814,11 @@
 				5260717A1C6F040900D38704 /* user1.png in Resources */,
 				52E8EA021C57B9C900D59716 /* USAStatesNames.txt in Resources */,
 				2E89D9B51C4F678E00EC3DD7 /* back-arrow-white.png in Resources */,
+				2E58D2161CA44F6A0057E1FD /* icon-search-red.png in Resources */,
 				520C11911C7463C7005B815F /* star-yellow.png in Resources */,
 				8321E7FC1C3C03E60095C3D7 /* btn-scan-qr-code.png in Resources */,
 				A8AABCFD1C5A2EB100723DF8 /* btn-black.png in Resources */,
+				2E58D2141CA44B060057E1FD /* item-overlay.png in Resources */,
 				83297B301C3163B900125EE7 /* login-google@2x.png in Resources */,
 				526071511C68CBD900D38704 /* btn-pay.png in Resources */,
 				529029371C90550200008D94 /* unfilled@3x.png in Resources */,
