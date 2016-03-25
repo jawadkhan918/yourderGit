@@ -15,7 +15,11 @@
     UIView *emptyView;
 }
 
+
 @end
+#define IDIOM    UI_USER_INTERFACE_IDIOM()
+#define IPAD     UIUserInterfaceIdiomPad
+
 
 @implementation pagerChildViewController
 
@@ -39,6 +43,9 @@
     else if ([[UIScreen mainScreen] bounds].size.height == 736)
     {
         self.tblDishes.frame = CGRectMake(0, 0, 414, 400);
+    } else if ([[UIScreen mainScreen] bounds].size.height == 1024)
+    {
+        self.tblDishes.frame = CGRectMake(0,0, self.view.frame.size.width,850);
     }
 }
 
@@ -91,6 +98,7 @@
 {
     static NSString *MyIdentifier = @"cell";
     DishesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+  
     
     if (cell == nil)
     {
@@ -155,11 +163,21 @@
 
 - (UIView *) createPopup: (int) index
 {
-    UIView *demoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 302, 484)];
+    UIView *demoView ;
     
     _objYourderView = [[[NSBundle mainBundle] loadNibNamed:@"Yourderpopup" owner:self options:nil] objectAtIndex:0];
     _objYourderView.tag = 1001;
-    _objYourderView.frame = CGRectMake(0, 0, 302, 484);
+    
+    if ( IDIOM == IPAD ) {
+        
+        demoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 360, 480)];
+        _objYourderView.frame = CGRectMake(0, 0, 360, 480);
+        
+    } else {
+        demoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 302, 430)];
+        _objYourderView.frame = CGRectMake(0, 0, 302, 430);
+        
+    }
     _objYourderView.layer.cornerRadius = 7;
     _objYourderView.layer.masksToBounds = YES;
     _objYourderView.arrMenuItems = self.arrMenuItems;

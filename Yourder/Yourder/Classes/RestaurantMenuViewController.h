@@ -19,6 +19,8 @@
 
 @property (strong, nonatomic) NSDictionary *dictSelectedRestaurant;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrCatgories;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrDishes;
+
 @property (strong, nonatomic) UIPageViewController *pageController;
 @property (strong, nonatomic) RapidzzUserManager *manager;
 @property (strong, nonatomic) NSMutableArray *arrCategories;

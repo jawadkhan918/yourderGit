@@ -39,6 +39,7 @@
 @property (weak, nonatomic) IBOutlet IQDropDownTextField *txtZipCode;
 @property (weak, nonatomic) IBOutlet IQDropDownTextField *txtCousine;
 
+
 //SEARCH VARIABLES
 @property (strong, nonatomic) NSMutableArray *arrdistance;
 @property (strong, nonatomic) NSArray *arrState;

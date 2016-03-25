@@ -285,7 +285,7 @@
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     self.manager = [[RapidzzUserManager alloc] init];
     self.manager.delegate = self;
-    NSDictionary *dict = @{@"page":[NSString stringWithFormat:@"%i",pageCount],@"rest_lat":strLat,@"rest_long":strLong};
+    NSDictionary *dict = @{@"page":[NSString stringWithFormat:@"%i",pageCount],@"restlat":strLat,@"restlong":strLong};
     [self.manager getRestaurantList:dict];
 }
 
@@ -555,6 +555,7 @@
     cell.ratingView.starSize = CGSizeMake(15.0, 15.0);
     cell.ratingView.rating = [[dict objectForKey:@"rating_value"] floatValue];
     cell.lblRatingValue.text = [NSString stringWithFormat:@"%.01f", [[dict objectForKey:@"rating_value"] floatValue]];
+    cell.rest_distabce.text = [NSString stringWithFormat:@"%.01f", [[dict objectForKey:@"rest_distance"] floatValue]];
     
     if ([[dict objectForKey:@"rest_thumbnail"] length] > 10)
     {
@@ -569,6 +570,15 @@
     
     NSURL *logoImageURL = [NSURL URLWithString:[dict objectForKey:@"rest_logo"]];
     [cell.imgRetaurantLogo setImageWithURL:logoImageURL];
+    if ([[dict objectForKey:@"rest_logo"] length] > 10)
+   {
+        NSURL *agentImageURL = [NSURL URLWithString:[dict objectForKey:@"rest_logo"]];
+        [cell.imgRetaurantLogo setImageWithURL:agentImageURL];
+    }
+    else
+    {
+        cell.imgRetaurantLogo.image = [UIImage imageNamed:@"icon-table.png"];
+    }
     cell.imgRetaurantLogo.layer.cornerRadius= cell.imgRetaurantLogo.frame.size.width / 2;
     cell.imgRetaurantLogo.layer.masksToBounds = YES;
     cell.imgRetaurantLogo.clipsToBounds = YES;

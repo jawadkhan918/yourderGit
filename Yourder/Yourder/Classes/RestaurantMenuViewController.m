@@ -21,8 +21,13 @@
     AppDelegate *delegate;
     UIView *serviceView;
     UIView *emptyView;
+    NSMutableArray *arrUserDishes;
     
 }
+
+#define IDIOM    UI_USER_INTERFACE_IDIOM()
+#define IPAD     UIUserInterfaceIdiomPad
+
 
 @end
 
@@ -36,7 +41,7 @@
     pagerIndex = 0;
     pageIndex = 0;
     pagerStartFirstTime = YES;
-    
+    [self getDishes];
     //SLIDEBAR VIEW
     self.slidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
     SWRevealViewController *revealViewController = self.revealViewController;
@@ -47,6 +52,8 @@
     }
 
     [self.scrCatgories setScrollEnabled:YES];
+    [self.scrDishes setScrollEnabled:YES];
+    
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     //CALL BINDING METHODS
@@ -61,10 +68,99 @@
     UIWindow* mainWindow = [[UIApplication sharedApplication] keyWindow];
     [mainWindow addSubview: self.btnServiceRequest];
    
+   
 }
 
 
+// GET USER DISHES
+-(void)getDishes
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    arrUserDishes = [[NSMutableArray alloc] init];
+    self.manager = [[RapidzzUserManager alloc]init];
+    self.manager.delegate = self;
+    //NSLog(@"dict%@",[AppDelegate singleton].userInfo);
+    NSDictionary *dict = @{@"login_id":[[AppDelegate singleton].userInfo objectForKey:@"login_id"]
+                           ,@"status":@"0"};
+    [self.manager getUserDishes:dict];
+}
 
+-(void)DidGetUserDishesSuccessfully:(RapidzzBaseManager *)manager
+{
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    //serviceResponse = manager.data;
+    arrUserDishes = [NSMutableArray arrayWithArray:[manager.data objectForKey:@"order_detail"]];
+    [AppDelegate singleton].arrCurrOrder = arrUserDishes;
+    //[self.tblOrder reloadData];
+    for (int i = 0; i<arrUserDishes.count; i++)
+    {
+        [self addUserDishes];
+//        self.totalAmount = self.totalAmount + [[[arrUserDishes objectAtIndex:i] objectForKey:@"uPay"] floatValue];
+//        self.lblTotalAmount.text = [NSString stringWithFormat:@"%.02f",self.totalAmount];
+    }
+    //[AppDelegate singleton].totalBillAmount = self.totalAmount; //[[manager.data objectForKey:@"total_price"] floatValue];
+//    delegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+//    delegate.totalBillAmount = delegate.totalBillAmount + self.totalAmount;
+    
+    
+}
+
+-(void)DidFailToGetUserDishes:(RapidzzBaseManager *)manager error:(RapidzzError *)error
+{
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    [[AppDelegate singleton] showAlertwith:nil andMessage:@"Failed! Please try again"];
+}
+
+-(void)addUserDishes{
+    
+   // arrSelectUser = [[NSMutableArray alloc]init];
+    
+    
+    NSUInteger i;
+    int xCoord=10;
+    int yCoord=5;
+    int buttonWidth=80;
+    int buttonHeight=40;
+    int buffer = 10;
+    double labelWidth = 0;
+    UIImageView *imageView;
+    for (i = 0; i < arrUserDishes.count ; i++)
+    {
+        
+        
+        imageView = [[UIImageView alloc] init];
+        
+        imageView.frame = CGRectMake(xCoord,yCoord,buttonWidth,buttonHeight);
+      
+        if ([[[arrUserDishes objectAtIndex:i] objectForKey:@"item_thumbnail"] length] < 10)
+        {
+            
+            //[imageView setImage:[UIImage imageNamed:@"icon-person-notification.png"] forState:UIControlStateNormal];
+        }
+        else
+        {
+            NSURL *agentImageURL = [NSURL URLWithString:[[arrUserDishes objectAtIndex:i] objectForKey:@"item_thumbnail"]];
+            [imageView setImageWithURL:agentImageURL];
+            imageView.layer.cornerRadius=20;
+            imageView.layer.masksToBounds = YES;
+            
+         
+            
+        }
+        UITapGestureRecognizer *tap =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(btnYourorder:)];
+        [imageView addGestureRecognizer:tap];
+        imageView.userInteractionEnabled = YES;
+        [self.scrDishes addSubview:imageView];
+        
+        labelWidth = xCoord+50;
+        NSLog(@"width is %f",labelWidth);
+        xCoord += buttonWidth + buffer;
+        
+    }
+    
+    [self.scrDishes setContentSize:CGSizeMake(labelWidth+5, yCoord)];
+    
+}
 -(void) bindRestInfo
 {
     NSURL *agentImageURL = [NSURL URLWithString:[self.dictSelectedRestaurant objectForKey:@"rest_thumbnail"]];
@@ -156,7 +252,7 @@
 }
 
 
--(IBAction)btnYourorder:(id)sender
+-(void)btnYourorder:(UITapGestureRecognizer *)tap
 {
     [self performSegueWithIdentifier:@"MenuToYourorder" sender:self];
 }
@@ -238,8 +334,10 @@
     else if ([[UIScreen mainScreen] bounds].size.height == 736)
     {
         [[self.pageController view] setFrame:CGRectMake(0, 265, 414, 470)];
+    } else if ([[UIScreen mainScreen] bounds].size.height == 1024)
+    {
+        [[self.pageController view] setFrame:CGRectMake(0,90,self.view.frame.size.width,850)];
     }
-    
 
     //[[self.pageController view] setFrame:CGRectMake(0, 280, 375, 400)];
     pagerChildViewController *initialViewController;
@@ -316,24 +414,33 @@
 
     }
     
-    [self.btnYourOrder setFrame:CGRectMake(X_Co, Y_Co, 122, 50)];
+    //[self.btnYourOrder setFrame:CGRectMake(X_Co, Y_Co, 122, 50)];
     
-        [self.view addSubview:btnServiceRequest];
-    [self.view addSubview:button];
+       // [self.view addSubview:btnServiceRequest];
+   // [self.view addSubview:button];
     [self.view addSubview:_lblItemCount];
     
 }
 - (pagerChildViewController *)viewControllerAtIndex:(NSUInteger)index
 {
     _pageController.delegate = self;
+    pagerChildViewController* childViewController;
+    if ( IDIOM == IPAD ) {
+        UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"StoryboardiPad"
+                                                      bundle:nil];
+        childViewController = [sb instantiateViewControllerWithIdentifier:@"pagerChildViewController"];
+
+    } else {
+        UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"Main"
+                                                      bundle:nil];
+        childViewController = [sb instantiateViewControllerWithIdentifier:@"pagerChildViewController"];
+       
+    }
+
     
+   
+     childViewController.index = index;
     
-    
-    UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"Main"
-                                                  bundle:nil];
-    pagerChildViewController* childViewController = [sb instantiateViewControllerWithIdentifier:@"pagerChildViewController"];
-    
-    childViewController.index = index;
     return childViewController;
     
 }
@@ -449,8 +556,19 @@
     UIView *demoView;
     _objYourderView = [self.storyboard instantiateViewControllerWithIdentifier:@"PlaceorderVC"];
     //float Y_Co = self.view.frame.size.height - 430;
-    demoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 302, 430)];
-    _objYourderView.view.frame = CGRectMake(0, 0, 302, 430);
+    
+    if ( IDIOM == IPAD ) {
+        
+        demoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 360, 480)];
+        _objYourderView.view.frame = CGRectMake(0, 0, 360, 480);
+        
+    } else {
+        demoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 302, 430)];
+        _objYourderView.view.frame = CGRectMake(0, 0, 302, 430);
+        
+    }
+    
+    
     
     //ADD BUTTONS METHODS
     [_objYourderView.btnCancel addTarget:self action:@selector(btnCancel:) forControlEvents:UIControlEventTouchUpInside];
