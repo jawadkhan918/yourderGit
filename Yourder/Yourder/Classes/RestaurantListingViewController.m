@@ -11,7 +11,7 @@
 #import "Constants.h"
 
 
-@interface RestaurantListingViewController ()
+@interface RestaurantListingViewController ()<SWRevealViewControllerDelegate>
 {
     int imgid;
     NSDictionary *dictSelectedRestaurant;
@@ -57,6 +57,7 @@
     self.arrRestaurants = [[NSMutableArray alloc] init];
     
     //SLIDEBAR VIEW
+    
     self.slidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
@@ -87,6 +88,7 @@
     // add Map
     //self.myMap = [[MKMapView alloc] initWithFrame:self.view.frame];
     self.myMap = [[MKMapView alloc] initWithFrame:CGRectMake(0,60, self.view.frame.size.width, self.view.frame.size.height)];
+    self.myMap.frame = CGRectMake(0,60, self.view.frame.size.width, self.view.frame.size.height);
     self.myMap.showsUserLocation = YES;
     [self.myMap setShowsUserLocation:YES];
     self.myMap.mapType = MKMapTypeStandard;
@@ -569,11 +571,11 @@
     
     
     NSURL *logoImageURL = [NSURL URLWithString:[dict objectForKey:@"rest_logo"]];
-    [cell.imgRetaurantLogo setImageWithURL:logoImageURL];
+
+    //[cell.imgRetaurantLogo setImageWithURL:logoImageURL];
     if ([[dict objectForKey:@"rest_logo"] length] > 10)
-   {
-        NSURL *agentImageURL = [NSURL URLWithString:[dict objectForKey:@"rest_logo"]];
-        [cell.imgRetaurantLogo setImageWithURL:agentImageURL];
+    {
+        [cell.imgRetaurantLogo setImageWithURL:logoImageURL];
     }
     else
     {

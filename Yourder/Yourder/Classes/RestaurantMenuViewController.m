@@ -180,7 +180,7 @@
 -(void) getRestaurantMenuCategories
 {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSDictionary *dictParams = @{@"rest_id":@"1"};
+    NSDictionary *dictParams = @{@"rest_id":[self.dictSelectedRestaurant objectForKey:@"rest_id"]};
     self.manager = [[RapidzzUserManager alloc] init];
     self.manager.delegate = self;
     [self.manager getRestaurantMenuCategories:dictParams];
@@ -329,7 +329,7 @@
     }
     else if ([[UIScreen mainScreen] bounds].size.height == 667)
     {
-        [[self.pageController view] setFrame:CGRectMake(0, 260, 375, 407)];
+        [[self.pageController view] setFrame:CGRectMake(0,83 , 375,585)];
     }
     else if ([[UIScreen mainScreen] bounds].size.height == 736)
     {

@@ -116,16 +116,17 @@
     
     //[cell.btnAdd addTarget:self action:@selector(addToCart:) forControlEvents:UIControlEventTouchUpInside];
     [cell.btnAdd addTarget:self action:@selector(showYourderPopup:) forControlEvents:UIControlEventTouchUpInside];
-    
+     NSURL *agentImageURL = [NSURL URLWithString:[dict objectForKey:@"item_thumbnail"]];
     if ([[dict objectForKey:@"item_thumbnail"] length] > 10)
     {
-        NSURL *agentImageURL = [NSURL URLWithString:[dict objectForKey:@"item_thumbnail"]];
         [cell.imgDishthumb setImageWithURL:agentImageURL];
+        //cell.backgroundColor =  cell.imgDishthumb;
     }
     else
     {
         cell.imgDishthumb.image = [UIImage imageNamed:@"no-image-yourder.png"];
     }
+    
     
     return cell;
 }

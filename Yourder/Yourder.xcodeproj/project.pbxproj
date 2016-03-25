@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E58D2141CA44B060057E1FD /* item-overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E58D2131CA44B060057E1FD /* item-overlay.png */; };
+		2E58D2161CA44F6A0057E1FD /* icon-search-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E58D2151CA44F6A0057E1FD /* icon-search-red.png */; };
 		2E592C9F1C9AFC3E004FDFF0 /* OrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E592C9E1C9AFC3E004FDFF0 /* OrdersViewController.m */; };
 		2E592CA21C9B0128004FDFF0 /* TableOrdersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E592CA11C9B0128004FDFF0 /* TableOrdersTableViewCell.m */; };
 		2E5DFA9B1C414D270042A068 /* slidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5DFA981C414D270042A068 /* slidebarViewController.m */; };
@@ -32,6 +34,16 @@
 		2E89D9C31C4F678E00EC3DD7 /* next-arrow-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E89D9B11C4F678E00EC3DD7 /* next-arrow-white.png */; };
 		2E89D9C41C4F678E00EC3DD7 /* no-image-yourder-popup.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E89D9B21C4F678E00EC3DD7 /* no-image-yourder-popup.png */; };
 		2E89D9C51C4F678E00EC3DD7 /* qty-bg-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E89D9B31C4F678E00EC3DD7 /* qty-bg-white.png */; };
+		2EA2145C1CA5303600ADC724 /* bg-pay.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA214521CA5303600ADC724 /* bg-pay.png */; };
+		2EA2145D1CA5303600ADC724 /* bg-percent.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA214531CA5303600ADC724 /* bg-percent.png */; };
+		2EA2145E1CA5303600ADC724 /* btn-pay-for.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA214541CA5303600ADC724 /* btn-pay-for.png */; };
+		2EA2145F1CA5303600ADC724 /* btn-pay-now1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA214551CA5303600ADC724 /* btn-pay-now1.png */; };
+		2EA214601CA5303600ADC724 /* btn-x-white-pay.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA214561CA5303600ADC724 /* btn-x-white-pay.png */; };
+		2EA214611CA5303600ADC724 /* demo-image-pay-for.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA214571CA5303600ADC724 /* demo-image-pay-for.png */; };
+		2EA214621CA5303600ADC724 /* demo-image-splitwith.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA214581CA5303600ADC724 /* demo-image-splitwith.png */; };
+		2EA214631CA5303600ADC724 /* footer-pay.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA214591CA5303600ADC724 /* footer-pay.png */; };
+		2EA214641CA5303600ADC724 /* popup-pay.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA2145A1CA5303600ADC724 /* popup-pay.png */; };
+		2EA214651CA5303600ADC724 /* white-margin.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA2145B1CA5303600ADC724 /* white-margin.png */; };
 		520C117C1C744D2B005B815F /* RatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520C117B1C744D2B005B815F /* RatingViewController.m */; };
 		520C11881C7463C7005B815F /* btn-grey-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 520C117E1C7463C7005B815F /* btn-grey-1.png */; };
 		520C11891C7463C7005B815F /* btn-grey-close.png in Resources */ = {isa = PBXBuildFile; fileRef = 520C117F1C7463C7005B815F /* btn-grey-close.png */; };
@@ -234,6 +246,14 @@
 		838904B91C41058100EB721E /* DishesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 838904B81C41058100EB721E /* DishesTableViewCell.m */; };
 		838904BB1C41301F00EB721E /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 838904BA1C41301F00EB721E /* line.png */; };
 		8392C7B21C395B6100837D13 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8392C7B11C395B6100837D13 /* icon.png */; };
+		83939F301CA3E278008741DD /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83939F2D1CA3E278008741DD /* PageContentViewController.m */; };
+		83939F311CA3E278008741DD /* pageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83939F2F1CA3E278008741DD /* pageView.m */; };
+		83939F3A1CA3E846008741DD /* bg-Yourder_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 83939F361CA3E846008741DD /* bg-Yourder_login.png */; };
+		83939F3B1CA3E846008741DD /* bg-yourder_login2.png in Resources */ = {isa = PBXBuildFile; fileRef = 83939F371CA3E846008741DD /* bg-yourder_login2.png */; };
+		83939F3C1CA3E846008741DD /* bg-yourder_login3.png in Resources */ = {isa = PBXBuildFile; fileRef = 83939F381CA3E846008741DD /* bg-yourder_login3.png */; };
+		83939F3D1CA3E846008741DD /* bg-yourder_login4.png in Resources */ = {isa = PBXBuildFile; fileRef = 83939F391CA3E846008741DD /* bg-yourder_login4.png */; };
+		83939F401CA3E8EE008741DD /* btn-login.png in Resources */ = {isa = PBXBuildFile; fileRef = 83939F3E1CA3E8EE008741DD /* btn-login.png */; };
+		83939F411CA3E8EE008741DD /* btn-signup.png in Resources */ = {isa = PBXBuildFile; fileRef = 83939F3F1CA3E8EE008741DD /* btn-signup.png */; };
 		8395E7381C381DA600AB46DC /* icon-arrow-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 8395E7371C381DA600AB46DC /* icon-arrow-grey.png */; };
 		8395E73B1C385A6400AB46DC /* btn-list.png in Resources */ = {isa = PBXBuildFile; fileRef = 8395E7391C385A6400AB46DC /* btn-list.png */; };
 		8395E73C1C385A6400AB46DC /* btn-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 8395E73A1C385A6400AB46DC /* btn-map.png */; };
@@ -348,6 +368,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E58D2131CA44B060057E1FD /* item-overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "item-overlay.png"; sourceTree = "<group>"; };
+		2E58D2151CA44F6A0057E1FD /* icon-search-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-search-red.png"; sourceTree = "<group>"; };
 		2E592C9D1C9AFC3E004FDFF0 /* OrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdersViewController.h; sourceTree = "<group>"; };
 		2E592C9E1C9AFC3E004FDFF0 /* OrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdersViewController.m; sourceTree = "<group>"; };
 		2E592CA01C9B0128004FDFF0 /* TableOrdersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableOrdersTableViewCell.h; sourceTree = "<group>"; };
@@ -380,6 +402,16 @@
 		2E89D9B11C4F678E00EC3DD7 /* next-arrow-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next-arrow-white.png"; sourceTree = "<group>"; };
 		2E89D9B21C4F678E00EC3DD7 /* no-image-yourder-popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no-image-yourder-popup.png"; sourceTree = "<group>"; };
 		2E89D9B31C4F678E00EC3DD7 /* qty-bg-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qty-bg-white.png"; sourceTree = "<group>"; };
+		2EA214521CA5303600ADC724 /* bg-pay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-pay.png"; sourceTree = "<group>"; };
+		2EA214531CA5303600ADC724 /* bg-percent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-percent.png"; sourceTree = "<group>"; };
+		2EA214541CA5303600ADC724 /* btn-pay-for.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-pay-for.png"; sourceTree = "<group>"; };
+		2EA214551CA5303600ADC724 /* btn-pay-now1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-pay-now1.png"; sourceTree = "<group>"; };
+		2EA214561CA5303600ADC724 /* btn-x-white-pay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-x-white-pay.png"; sourceTree = "<group>"; };
+		2EA214571CA5303600ADC724 /* demo-image-pay-for.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "demo-image-pay-for.png"; sourceTree = "<group>"; };
+		2EA214581CA5303600ADC724 /* demo-image-splitwith.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "demo-image-splitwith.png"; sourceTree = "<group>"; };
+		2EA214591CA5303600ADC724 /* footer-pay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "footer-pay.png"; sourceTree = "<group>"; };
+		2EA2145A1CA5303600ADC724 /* popup-pay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popup-pay.png"; sourceTree = "<group>"; };
+		2EA2145B1CA5303600ADC724 /* white-margin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-margin.png"; sourceTree = "<group>"; };
 		520C117A1C744D2B005B815F /* RatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RatingViewController.h; path = ../RatingViewController.h; sourceTree = "<group>"; };
 		520C117B1C744D2B005B815F /* RatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RatingViewController.m; path = ../RatingViewController.m; sourceTree = "<group>"; };
 		520C117E1C7463C7005B815F /* btn-grey-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-grey-1.png"; sourceTree = "<group>"; };
@@ -628,6 +660,16 @@
 		838904B81C41058100EB721E /* DishesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DishesTableViewCell.m; sourceTree = "<group>"; };
 		838904BA1C41301F00EB721E /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
 		8392C7B11C395B6100837D13 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		83939F2C1CA3E278008741DD /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		83939F2D1CA3E278008741DD /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		83939F2E1CA3E278008741DD /* pageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pageView.h; sourceTree = "<group>"; };
+		83939F2F1CA3E278008741DD /* pageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pageView.m; sourceTree = "<group>"; };
+		83939F361CA3E846008741DD /* bg-Yourder_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-Yourder_login.png"; sourceTree = "<group>"; };
+		83939F371CA3E846008741DD /* bg-yourder_login2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-yourder_login2.png"; sourceTree = "<group>"; };
+		83939F381CA3E846008741DD /* bg-yourder_login3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-yourder_login3.png"; sourceTree = "<group>"; };
+		83939F391CA3E846008741DD /* bg-yourder_login4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-yourder_login4.png"; sourceTree = "<group>"; };
+		83939F3E1CA3E8EE008741DD /* btn-login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-login.png"; sourceTree = "<group>"; };
+		83939F3F1CA3E8EE008741DD /* btn-signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-signup.png"; sourceTree = "<group>"; };
 		8395E7371C381DA600AB46DC /* icon-arrow-grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow-grey.png"; sourceTree = "<group>"; };
 		8395E7391C385A6400AB46DC /* btn-list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-list.png"; sourceTree = "<group>"; };
 		8395E73A1C385A6400AB46DC /* btn-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-map.png"; sourceTree = "<group>"; };
@@ -885,6 +927,23 @@
 				2E89D9B31C4F678E00EC3DD7 /* qty-bg-white.png */,
 			);
 			path = YourderPopup;
+			sourceTree = "<group>";
+		};
+		2EA214511CA5303600ADC724 /* yourder_redesigned_pay */ = {
+			isa = PBXGroup;
+			children = (
+				2EA214521CA5303600ADC724 /* bg-pay.png */,
+				2EA214531CA5303600ADC724 /* bg-percent.png */,
+				2EA214541CA5303600ADC724 /* btn-pay-for.png */,
+				2EA214551CA5303600ADC724 /* btn-pay-now1.png */,
+				2EA214561CA5303600ADC724 /* btn-x-white-pay.png */,
+				2EA214571CA5303600ADC724 /* demo-image-pay-for.png */,
+				2EA214581CA5303600ADC724 /* demo-image-splitwith.png */,
+				2EA214591CA5303600ADC724 /* footer-pay.png */,
+				2EA2145A1CA5303600ADC724 /* popup-pay.png */,
+				2EA2145B1CA5303600ADC724 /* white-margin.png */,
+			);
+			path = yourder_redesigned_pay;
 			sourceTree = "<group>";
 		};
 		520C117D1C7463BA005B815F /* RateView */ = {
@@ -1196,6 +1255,7 @@
 		8336C1981C205AE0002E1343 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				83939F2B1CA3E278008741DD /* PagerView */,
 				524E9CE31C955E1D00216A5A /* RestaurantClasses */,
 				83CAA6B91C75BD640007D533 /* PopupScreens */,
 				8336C1991C205B13002E1343 /* LoginViewController.h */,
@@ -1227,6 +1287,17 @@
 				8321E7F21C3C01BB0095C3D7 /* Storyboard */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		83939F2B1CA3E278008741DD /* PagerView */ = {
+			isa = PBXGroup;
+			children = (
+				83939F2C1CA3E278008741DD /* PageContentViewController.h */,
+				83939F2D1CA3E278008741DD /* PageContentViewController.m */,
+				83939F2E1CA3E278008741DD /* pageView.h */,
+				83939F2F1CA3E278008741DD /* pageView.m */,
+			);
+			path = PagerView;
 			sourceTree = "<group>";
 		};
 		83AE4FEA1C48C1F00047ECB4 /* Yourorder */ = {
@@ -1325,7 +1396,16 @@
 		83B3D3061C22B8A30045412F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2EA214511CA5303600ADC724 /* yourder_redesigned_pay */,
+				2E58D2151CA44F6A0057E1FD /* icon-search-red.png */,
+				2E58D2131CA44B060057E1FD /* item-overlay.png */,
 				5283B56F1C7EE3AD00AA39EA /* btn-pay-now2.png */,
+				83939F361CA3E846008741DD /* bg-Yourder_login.png */,
+				83939F371CA3E846008741DD /* bg-yourder_login2.png */,
+				83939F381CA3E846008741DD /* bg-yourder_login3.png */,
+				83939F391CA3E846008741DD /* bg-yourder_login4.png */,
+				83939F3E1CA3E8EE008741DD /* btn-login.png */,
+				83939F3F1CA3E8EE008741DD /* btn-signup.png */,
 				520C117D1C7463BA005B815F /* RateView */,
 				526071661C6F03FB00D38704 /* RestaurantTables */,
 				5260715A1C6CD86A00D38704 /* bg-history-item.png */,
@@ -1749,6 +1829,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				526071631C6DAEAD00D38704 /* icon_red_plus.png in Resources */,
+				83939F411CA3E8EE008741DD /* btn-signup.png in Resources */,
 				83AE4FE71C48AE600047ECB4 /* photo-rest-shadow-i6.png in Resources */,
 				832EE34B1C2824AC00DECB01 /* 1.png in Resources */,
 				8336C18E1C205430002E1343 /* FacebookSDK-4_8-for-iOS.docset in Resources */,
@@ -1757,6 +1838,7 @@
 				524154F21CA3D039005ED45A /* cart-bg.png in Resources */,
 				524154F01CA3D039005ED45A /* btn-submit.png in Resources */,
 				520C119B1C747ADA005B815F /* star_fiiled@3x.png in Resources */,
+				2EA214601CA5303600ADC724 /* btn-x-white-pay.png in Resources */,
 				83161EFA1C355F16002C2883 /* icon-menu@2x.png in Resources */,
 				83161EFC1C3576E0002C2883 /* pin-map@2x.png in Resources */,
 				526071091C5CD10200D38704 /* btn-settings.png in Resources */,
@@ -1771,6 +1853,7 @@
 				8395E73C1C385A6400AB46DC /* btn-map.png in Resources */,
 				8321E7FA1C3C03DB0095C3D7 /* btn-go.png in Resources */,
 				8321E8091C3C13EB0095C3D7 /* btn-close-dark.png in Resources */,
+				83939F3B1CA3E846008741DD /* bg-yourder_login2.png in Resources */,
 				526071121C5CD10200D38704 /* sidemenu-bg2.png in Resources */,
 				52C7E5AC1C58E78800392668 /* icon-table.png in Resources */,
 				83161EE81C34EC13002C2883 /* bg-logo-rest-round.png in Resources */,
@@ -1796,12 +1879,20 @@
 				5260717A1C6F040900D38704 /* user1.png in Resources */,
 				52E8EA021C57B9C900D59716 /* USAStatesNames.txt in Resources */,
 				2E89D9B51C4F678E00EC3DD7 /* back-arrow-white.png in Resources */,
+				2E58D2161CA44F6A0057E1FD /* icon-search-red.png in Resources */,
 				520C11911C7463C7005B815F /* star-yellow.png in Resources */,
 				8321E7FC1C3C03E60095C3D7 /* btn-scan-qr-code.png in Resources */,
 				A8AABCFD1C5A2EB100723DF8 /* btn-black.png in Resources */,
-				524154F61CA3D039005ED45A /* item-overlay.png in Resources */,
+
+				2E58D2141CA44B060057E1FD /* item-overlay.png in Resources */,
+
 				83297B301C3163B900125EE7 /* login-google@2x.png in Resources */,
+				2EA214651CA5303600ADC724 /* white-margin.png in Resources */,
 				526071511C68CBD900D38704 /* btn-pay.png in Resources */,
+
+				2EA2145E1CA5303600ADC724 /* btn-pay-for.png in Resources */,
+				529029371C90550200008D94 /* unfilled@3x.png in Resources */,
+
 				5283B56A1C7C7A0500AA39EA /* close-notification.png in Resources */,
 				526071751C6F040900D38704 /* icon-arrow-down-w.png in Resources */,
 				5260710F1C5CD10200D38704 /* icon-settings.png in Resources */,
@@ -1826,6 +1917,7 @@
 				8336C1961C205430002E1343 /* LICENSE.txt in Resources */,
 				520C119E1C747ADA005B815F /* star_unfilled@3x.png in Resources */,
 				A8AABCFE1C5A2EB100723DF8 /* icon-password.png in Resources */,
+				2EA214611CA5303600ADC724 /* demo-image-pay-for.png in Resources */,
 				83EF96381C3AE1B90013F89F /* icon-circle-detail.png in Resources */,
 				5283B5701C7EE3AD00AA39EA /* btn-pay-now2.png in Resources */,
 				83AE4FF41C48C2040047ECB4 /* btn-pay-now.png in Resources */,
@@ -1848,9 +1940,11 @@
 				526071791C6F040900D38704 /* icon-people-03.png in Resources */,
 				8395E7381C381DA600AB46DC /* icon-arrow-grey.png in Resources */,
 				83EF96361C3AE1B90013F89F /* icon-circle-contact.png in Resources */,
+				83939F3D1CA3E846008741DD /* bg-yourder_login4.png in Resources */,
 				2E89D9C21C4F678E00EC3DD7 /* next-arrow-red.png in Resources */,
 				52EF2F231C6FA35A00D56D0A /* icon-edit.png in Resources */,
 				83D648C61C32AEF800E413D6 /* splash-screen-iphone@3x.png in Resources */,
+				2EA214641CA5303600ADC724 /* popup-pay.png in Resources */,
 				832EE34F1C2824AC00DECB01 /* 5.png in Resources */,
 				526071061C5CD10200D38704 /* btn-logout.png in Resources */,
 				832EE34C1C2824AC00DECB01 /* 2.png in Resources */,
@@ -1880,10 +1974,12 @@
 				832EE34D1C2824AC00DECB01 /* 3.png in Resources */,
 				526071101C5CD10200D38704 /* separator.png in Resources */,
 				52C7E5AD1C58E78800392668 /* thumb-restaurant-yourorder.png in Resources */,
+				83939F401CA3E8EE008741DD /* btn-login.png in Resources */,
 				526071001C5CD10200D38704 /* btn-icon-history.png in Resources */,
 				83AE50141C4A6F380047ECB4 /* icon-arrow-prev.png in Resources */,
 				5260715D1C6DA98A00D38704 /* line-red.png in Resources */,
 				5260710E1C5CD10200D38704 /* icon-payment.png in Resources */,
+				83939F3C1CA3E846008741DD /* bg-yourder_login3.png in Resources */,
 				83AE4FE91C48B0D00047ECB4 /* bg-menu-item-750.png in Resources */,
 				526071741C6F040900D38704 /* green-people.png in Resources */,
 				526071461C64D27800D38704 /* btn-paypal.png in Resources */,
@@ -1897,6 +1993,7 @@
 				2E89D9BF1C4F678E00EC3DD7 /* icon-red-minus.png in Resources */,
 				2E89D9B41C4F678E00EC3DD7 /* back-arrow-red.png in Resources */,
 				83161EEA1C34EDB0002C2883 /* icon-location@2x.png in Resources */,
+				2EA2145D1CA5303600ADC724 /* bg-percent.png in Resources */,
 				8321E8141C3D0ADA0095C3D7 /* no-image-yourder.png in Resources */,
 				526071781C6F040900D38704 /* icon-people-02.png in Resources */,
 				2E89D9BB1C4F678E00EC3DD7 /* icon-people-02.png in Resources */,
@@ -1912,7 +2009,9 @@
 				524154F91CA3E44F005ED45A /* unfilled@2x.png in Resources */,
 				83297B2E1C3163B900125EE7 /* login-facebook@2x.png in Resources */,
 				83AE4FF51C48C2040047ECB4 /* icon-person-grey.png in Resources */,
+				2EA2145C1CA5303600ADC724 /* bg-pay.png in Resources */,
 				8336C1901C205430002E1343 /* FacebookSDKStrings.bundle in Resources */,
+				83939F3A1CA3E846008741DD /* bg-Yourder_login.png in Resources */,
 				520C11891C7463C7005B815F /* btn-grey-close.png in Resources */,
 				83EF96351C3AE1B90013F89F /* icon-circle-address.png in Resources */,
 				52C7E5AE1C58E78800392668 /* thumb-user-yourorder.png in Resources */,
@@ -1925,11 +2024,15 @@
 				520C118C1C7463C7005B815F /* btn-red-1.png in Resources */,
 				83AE4FF81C48C2040047ECB4 /* icon-table.png in Resources */,
 				520C118D1C7463C7005B815F /* btn-red-accept.png in Resources */,
-				52CDC5781CA51F9C00BA89DB /* download.png in Resources */,
+
+				2EA2145F1CA5303600ADC724 /* btn-pay-now1.png in Resources */,
+
 				2E89D9C51C4F678E00EC3DD7 /* qty-bg-white.png in Resources */,
 				526071621C6DAEAD00D38704 /* icon_red_minus.png in Resources */,
+				2EA214631CA5303600ADC724 /* footer-pay.png in Resources */,
 				526071421C634D1D00D38704 /* PlaceOrderpopup.xib in Resources */,
 				52C7E5A91C58E78800392668 /* icon-location-red.png in Resources */,
+				2EA214621CA5303600ADC724 /* demo-image-splitwith.png in Resources */,
 				5260710D1C5CD10200D38704 /* icon-loyalty.png in Resources */,
 				83297B331C317A0A00125EE7 /* GoogleService-Info.plist in Resources */,
 				520C119F1C747ADA005B815F /* unselected@2x.png in Resources */,
@@ -2058,6 +2161,7 @@
 				83D649451C32BC1D00E413D6 /* SDWebImageDownloader.m in Sources */,
 				83D6493E1C32BC1D00E413D6 /* MBProgressHUD.m in Sources */,
 				A8AABD061C5A577800723DF8 /* ResturantTableViewController.m in Sources */,
+				83939F311CA3E278008741DD /* pageView.m in Sources */,
 				529917CA1C81F344009138F1 /* PaymentViewController.m in Sources */,
 				83D6494E1C32BC1D00E413D6 /* UIImageView+WebCache.m in Sources */,
 				526071591C6CA26A00D38704 /* HistoryTableViewCell.m in Sources */,
@@ -2079,6 +2183,7 @@
 				8336C19E1C2126E2002E1343 /* RestaurantListingViewController.m in Sources */,
 				832EE3521C282C5600DECB01 /* RestaurantDetailViewController.m in Sources */,
 				83D6495D1C32BC1D00E413D6 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				83939F301CA3E278008741DD /* PageContentViewController.m in Sources */,
 				2E7713361C99926A0090E609 /* TableListViewController.m in Sources */,
 				83D6493F1C32BC1D00E413D6 /* MKAnnotationView+WebCache.m in Sources */,
 				83D6493D1C32BC1D00E413D6 /* Reachability.m in Sources */,

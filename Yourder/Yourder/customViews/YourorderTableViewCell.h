@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblDishTotal;
 @property (weak, nonatomic) IBOutlet UILabel *lblSplitWith;
 @property (weak, nonatomic) IBOutlet UILabel *lblYouPay;
+@property (weak, nonatomic) IBOutlet UIImageView *imgUser;
 
 @property (weak, nonatomic) IBOutlet UIButton *btnRemove;
 
