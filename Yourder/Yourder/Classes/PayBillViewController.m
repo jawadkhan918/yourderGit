@@ -41,11 +41,15 @@
     self.tbl_bgView.layer.masksToBounds = YES;
     self.tbl_bgView.clipsToBounds = YES;
     
-    self.viewTip_bg.layer.cornerRadius= self.viewTip_bg.frame.size.width / 20;
-    self.viewTip_bg.layer.masksToBounds = YES;
-    self.viewTip_bg.clipsToBounds = YES;
+//    self.viewTip_bg.layer.cornerRadius= self.viewTip_bg.frame.size.width / 20;
+//    self.viewTip_bg.layer.masksToBounds = YES;
+//    self.viewTip_bg.clipsToBounds = YES;
+    UIImageView * bgImage =[[UIImageView alloc]initWithFrame:self.view.frame];
     
-    self.environment = [NSString stringWithFormat:@"mock"];
+    bgImage.image = [UIImage imageNamed:@"bg-pay.png"]; [self.view addSubview:bgImage];
+    
+    [self.view sendSubviewToBack:bgImage];
+  //  self.environment = [NSString stringWithFormat:@"mock"];
     //self.environment = PayPalEnvironmentSandbox;
 
     self.Check = YES;
@@ -291,16 +295,17 @@
 
 -(IBAction)calculateTip:(id)sender
 {
+    UIButton *button = (UIButton *)sender;
     int tip;
-    if (self.tipSegment.selectedSegmentIndex == 0)
+    if (button.tag == 0)
     {
         tip = 10;
     }
-    else if(self.tipSegment.selectedSegmentIndex == 1)
+    else if(button.tag == 1)
     {
         tip = 12;
     }
-    else if(self.tipSegment.selectedSegmentIndex == 2)
+    else if(button.tag == 2)
     {
         tip = 15;
     }

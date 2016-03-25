@@ -84,7 +84,7 @@
 -(void) getRestaurantMenuCategories
 {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSDictionary *dictParams = @{@"rest_id":@"1"};
+    NSDictionary *dictParams = @{@"rest_id":[self.dictSelectedRestaurant objectForKey:@"rest_id"]};
     self.manager = [[RapidzzUserManager alloc] init];
     self.manager.delegate = self;
     [self.manager getRestaurantMenuCategories:dictParams];

@@ -34,6 +34,16 @@
 		2E89D9C31C4F678E00EC3DD7 /* next-arrow-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E89D9B11C4F678E00EC3DD7 /* next-arrow-white.png */; };
 		2E89D9C41C4F678E00EC3DD7 /* no-image-yourder-popup.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E89D9B21C4F678E00EC3DD7 /* no-image-yourder-popup.png */; };
 		2E89D9C51C4F678E00EC3DD7 /* qty-bg-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E89D9B31C4F678E00EC3DD7 /* qty-bg-white.png */; };
+		2EA2145C1CA5303600ADC724 /* bg-pay.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA214521CA5303600ADC724 /* bg-pay.png */; };
+		2EA2145D1CA5303600ADC724 /* bg-percent.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA214531CA5303600ADC724 /* bg-percent.png */; };
+		2EA2145E1CA5303600ADC724 /* btn-pay-for.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA214541CA5303600ADC724 /* btn-pay-for.png */; };
+		2EA2145F1CA5303600ADC724 /* btn-pay-now1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA214551CA5303600ADC724 /* btn-pay-now1.png */; };
+		2EA214601CA5303600ADC724 /* btn-x-white-pay.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA214561CA5303600ADC724 /* btn-x-white-pay.png */; };
+		2EA214611CA5303600ADC724 /* demo-image-pay-for.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA214571CA5303600ADC724 /* demo-image-pay-for.png */; };
+		2EA214621CA5303600ADC724 /* demo-image-splitwith.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA214581CA5303600ADC724 /* demo-image-splitwith.png */; };
+		2EA214631CA5303600ADC724 /* footer-pay.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA214591CA5303600ADC724 /* footer-pay.png */; };
+		2EA214641CA5303600ADC724 /* popup-pay.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA2145A1CA5303600ADC724 /* popup-pay.png */; };
+		2EA214651CA5303600ADC724 /* white-margin.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EA2145B1CA5303600ADC724 /* white-margin.png */; };
 		520C117C1C744D2B005B815F /* RatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520C117B1C744D2B005B815F /* RatingViewController.m */; };
 		520C11881C7463C7005B815F /* btn-grey-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 520C117E1C7463C7005B815F /* btn-grey-1.png */; };
 		520C11891C7463C7005B815F /* btn-grey-close.png in Resources */ = {isa = PBXBuildFile; fileRef = 520C117F1C7463C7005B815F /* btn-grey-close.png */; };
@@ -384,6 +394,16 @@
 		2E89D9B11C4F678E00EC3DD7 /* next-arrow-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next-arrow-white.png"; sourceTree = "<group>"; };
 		2E89D9B21C4F678E00EC3DD7 /* no-image-yourder-popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no-image-yourder-popup.png"; sourceTree = "<group>"; };
 		2E89D9B31C4F678E00EC3DD7 /* qty-bg-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qty-bg-white.png"; sourceTree = "<group>"; };
+		2EA214521CA5303600ADC724 /* bg-pay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-pay.png"; sourceTree = "<group>"; };
+		2EA214531CA5303600ADC724 /* bg-percent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-percent.png"; sourceTree = "<group>"; };
+		2EA214541CA5303600ADC724 /* btn-pay-for.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-pay-for.png"; sourceTree = "<group>"; };
+		2EA214551CA5303600ADC724 /* btn-pay-now1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-pay-now1.png"; sourceTree = "<group>"; };
+		2EA214561CA5303600ADC724 /* btn-x-white-pay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-x-white-pay.png"; sourceTree = "<group>"; };
+		2EA214571CA5303600ADC724 /* demo-image-pay-for.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "demo-image-pay-for.png"; sourceTree = "<group>"; };
+		2EA214581CA5303600ADC724 /* demo-image-splitwith.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "demo-image-splitwith.png"; sourceTree = "<group>"; };
+		2EA214591CA5303600ADC724 /* footer-pay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "footer-pay.png"; sourceTree = "<group>"; };
+		2EA2145A1CA5303600ADC724 /* popup-pay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "popup-pay.png"; sourceTree = "<group>"; };
+		2EA2145B1CA5303600ADC724 /* white-margin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-margin.png"; sourceTree = "<group>"; };
 		520C117A1C744D2B005B815F /* RatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RatingViewController.h; path = ../RatingViewController.h; sourceTree = "<group>"; };
 		520C117B1C744D2B005B815F /* RatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RatingViewController.m; path = ../RatingViewController.m; sourceTree = "<group>"; };
 		520C117E1C7463C7005B815F /* btn-grey-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-grey-1.png"; sourceTree = "<group>"; };
@@ -893,6 +913,23 @@
 			path = YourderPopup;
 			sourceTree = "<group>";
 		};
+		2EA214511CA5303600ADC724 /* yourder_redesigned_pay */ = {
+			isa = PBXGroup;
+			children = (
+				2EA214521CA5303600ADC724 /* bg-pay.png */,
+				2EA214531CA5303600ADC724 /* bg-percent.png */,
+				2EA214541CA5303600ADC724 /* btn-pay-for.png */,
+				2EA214551CA5303600ADC724 /* btn-pay-now1.png */,
+				2EA214561CA5303600ADC724 /* btn-x-white-pay.png */,
+				2EA214571CA5303600ADC724 /* demo-image-pay-for.png */,
+				2EA214581CA5303600ADC724 /* demo-image-splitwith.png */,
+				2EA214591CA5303600ADC724 /* footer-pay.png */,
+				2EA2145A1CA5303600ADC724 /* popup-pay.png */,
+				2EA2145B1CA5303600ADC724 /* white-margin.png */,
+			);
+			path = yourder_redesigned_pay;
+			sourceTree = "<group>";
+		};
 		520C117D1C7463BA005B815F /* RateView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1336,6 +1373,7 @@
 		83B3D3061C22B8A30045412F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2EA214511CA5303600ADC724 /* yourder_redesigned_pay */,
 				2E58D2151CA44F6A0057E1FD /* icon-search-red.png */,
 				2E58D2131CA44B060057E1FD /* item-overlay.png */,
 				5283B56F1C7EE3AD00AA39EA /* btn-pay-now2.png */,
@@ -1774,6 +1812,7 @@
 				83D648C81C32B55000E413D6 /* logo-yourder-hor@2x.png in Resources */,
 				526071041C5CD10200D38704 /* btn-icon-payment.png in Resources */,
 				520C119B1C747ADA005B815F /* star_fiiled@3x.png in Resources */,
+				2EA214601CA5303600ADC724 /* btn-x-white-pay.png in Resources */,
 				83161EFA1C355F16002C2883 /* icon-menu@2x.png in Resources */,
 				83161EFC1C3576E0002C2883 /* pin-map@2x.png in Resources */,
 				526071091C5CD10200D38704 /* btn-settings.png in Resources */,
@@ -1820,7 +1859,9 @@
 				A8AABCFD1C5A2EB100723DF8 /* btn-black.png in Resources */,
 				2E58D2141CA44B060057E1FD /* item-overlay.png in Resources */,
 				83297B301C3163B900125EE7 /* login-google@2x.png in Resources */,
+				2EA214651CA5303600ADC724 /* white-margin.png in Resources */,
 				526071511C68CBD900D38704 /* btn-pay.png in Resources */,
+				2EA2145E1CA5303600ADC724 /* btn-pay-for.png in Resources */,
 				529029371C90550200008D94 /* unfilled@3x.png in Resources */,
 				5283B56A1C7C7A0500AA39EA /* close-notification.png in Resources */,
 				526071751C6F040900D38704 /* icon-arrow-down-w.png in Resources */,
@@ -1845,6 +1886,7 @@
 				8336C1961C205430002E1343 /* LICENSE.txt in Resources */,
 				520C119E1C747ADA005B815F /* star_unfilled@3x.png in Resources */,
 				A8AABCFE1C5A2EB100723DF8 /* icon-password.png in Resources */,
+				2EA214611CA5303600ADC724 /* demo-image-pay-for.png in Resources */,
 				83EF96381C3AE1B90013F89F /* icon-circle-detail.png in Resources */,
 				5283B5701C7EE3AD00AA39EA /* btn-pay-now2.png in Resources */,
 				83AE4FF41C48C2040047ECB4 /* btn-pay-now.png in Resources */,
@@ -1870,6 +1912,7 @@
 				2E89D9C21C4F678E00EC3DD7 /* next-arrow-red.png in Resources */,
 				52EF2F231C6FA35A00D56D0A /* icon-edit.png in Resources */,
 				83D648C61C32AEF800E413D6 /* splash-screen-iphone@3x.png in Resources */,
+				2EA214641CA5303600ADC724 /* popup-pay.png in Resources */,
 				832EE34F1C2824AC00DECB01 /* 5.png in Resources */,
 				526071061C5CD10200D38704 /* btn-logout.png in Resources */,
 				832EE34C1C2824AC00DECB01 /* 2.png in Resources */,
@@ -1917,6 +1960,7 @@
 				2E89D9BF1C4F678E00EC3DD7 /* icon-red-minus.png in Resources */,
 				2E89D9B41C4F678E00EC3DD7 /* back-arrow-red.png in Resources */,
 				83161EEA1C34EDB0002C2883 /* icon-location@2x.png in Resources */,
+				2EA2145D1CA5303600ADC724 /* bg-percent.png in Resources */,
 				8321E8141C3D0ADA0095C3D7 /* no-image-yourder.png in Resources */,
 				526071781C6F040900D38704 /* icon-people-02.png in Resources */,
 				2E89D9BB1C4F678E00EC3DD7 /* icon-people-02.png in Resources */,
@@ -1931,6 +1975,7 @@
 				832EE3541C28942400DECB01 /* barcode@2x.png in Resources */,
 				83297B2E1C3163B900125EE7 /* login-facebook@2x.png in Resources */,
 				83AE4FF51C48C2040047ECB4 /* icon-person-grey.png in Resources */,
+				2EA2145C1CA5303600ADC724 /* bg-pay.png in Resources */,
 				8336C1901C205430002E1343 /* FacebookSDKStrings.bundle in Resources */,
 				83939F3A1CA3E846008741DD /* bg-Yourder_login.png in Resources */,
 				520C11891C7463C7005B815F /* btn-grey-close.png in Resources */,
@@ -1945,10 +1990,13 @@
 				520C118C1C7463C7005B815F /* btn-red-1.png in Resources */,
 				83AE4FF81C48C2040047ECB4 /* icon-table.png in Resources */,
 				520C118D1C7463C7005B815F /* btn-red-accept.png in Resources */,
+				2EA2145F1CA5303600ADC724 /* btn-pay-now1.png in Resources */,
 				2E89D9C51C4F678E00EC3DD7 /* qty-bg-white.png in Resources */,
 				526071621C6DAEAD00D38704 /* icon_red_minus.png in Resources */,
+				2EA214631CA5303600ADC724 /* footer-pay.png in Resources */,
 				526071421C634D1D00D38704 /* PlaceOrderpopup.xib in Resources */,
 				52C7E5A91C58E78800392668 /* icon-location-red.png in Resources */,
+				2EA214621CA5303600ADC724 /* demo-image-splitwith.png in Resources */,
 				5260710D1C5CD10200D38704 /* icon-loyalty.png in Resources */,
 				83297B331C317A0A00125EE7 /* GoogleService-Info.plist in Resources */,
 				520C119F1C747ADA005B815F /* unselected@2x.png in Resources */,
