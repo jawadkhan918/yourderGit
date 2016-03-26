@@ -2181,12 +2181,10 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVp-9O-x8T">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVp-9O-x8T">
                                         <rect key="frame" x="237" y="10" width="53" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="53" id="7j1-Si-40U"/>
-                                            <constraint firstAttribute="width" secondItem="zVp-9O-x8T" secondAttribute="height" multiplier="53:21" id="PMS-8C-cUo"/>
-                                            <constraint firstAttribute="height" constant="21" id="ouM-aB-Sq7"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2261,12 +2259,14 @@
                                     <constraint firstItem="V7N-eE-2Vq" firstAttribute="top" secondItem="GQT-5m-S1z" secondAttribute="top" id="EBz-ro-soU"/>
                                     <constraint firstItem="GQT-5m-S1z" firstAttribute="leading" secondItem="V7N-eE-2Vq" secondAttribute="trailing" constant="2" id="F5X-7b-Uw4"/>
                                     <constraint firstItem="OWG-ZH-lxE" firstAttribute="centerY" secondItem="1fy-7S-M1r" secondAttribute="centerY" id="FPi-sT-A2z"/>
+                                    <constraint firstItem="zVp-9O-x8T" firstAttribute="top" secondItem="Qf7-yG-rpy" secondAttribute="top" constant="10" id="IUt-EJ-F4u"/>
                                     <constraint firstItem="uJg-cG-SYm" firstAttribute="top" secondItem="wcn-Qs-x0A" secondAttribute="bottom" constant="7" id="KRC-20-bKd"/>
                                     <constraint firstItem="Bza-2C-BQ7" firstAttribute="leading" secondItem="1fy-7S-M1r" secondAttribute="leading" id="KaO-ii-2zm"/>
                                     <constraint firstItem="uJg-cG-SYm" firstAttribute="trailing" secondItem="OWG-ZH-lxE" secondAttribute="trailing" id="NTW-AG-VQ7"/>
                                     <constraint firstItem="wcn-Qs-x0A" firstAttribute="top" secondItem="hul-2b-UiM" secondAttribute="bottom" constant="9" id="Nps-0r-cpK"/>
                                     <constraint firstItem="E21-iw-57o" firstAttribute="trailing" secondItem="wcn-Qs-x0A" secondAttribute="trailing" id="Qd6-1G-Pgy"/>
                                     <constraint firstAttribute="bottom" secondItem="GZc-Ux-33G" secondAttribute="bottom" constant="47" id="Rde-IQ-If9"/>
+                                    <constraint firstItem="wcn-Qs-x0A" firstAttribute="top" secondItem="zVp-9O-x8T" secondAttribute="bottom" constant="11" id="T9T-km-6j1"/>
                                     <constraint firstAttribute="trailing" secondItem="uJg-cG-SYm" secondAttribute="trailing" constant="2" id="TPk-Nr-tY3"/>
                                     <constraint firstItem="OWG-ZH-lxE" firstAttribute="top" secondItem="uJg-cG-SYm" secondAttribute="bottom" constant="18" id="VWP-QU-Jzy"/>
                                     <constraint firstItem="wGE-DH-cJy" firstAttribute="centerY" secondItem="OWG-ZH-lxE" secondAttribute="centerY" id="Vq1-eR-h1r"/>
