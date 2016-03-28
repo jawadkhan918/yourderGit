@@ -21,6 +21,7 @@
 @property (nonatomic, strong) IBOutlet ASStarRatingView * ratingView;
 @property (weak, nonatomic) IBOutlet UILabel *rest_distabce;
 
+//@property (weak, nonatomic) IBOutlet UILabel *rest_distabce;
 
 
 

@@ -44,7 +44,7 @@
     [MBProgressHUD hideHUDForView:self.view animated:YES];
     serviceResponse = manager.data;
     arrUserDishes = [manager.data objectForKey:@"order_detail"];
-    [self.tblOrder reloadData];
+   
     for (int i = 0; i<arrUserDishes.count; i++)
     {
         totalAmount = totalAmount + [[[arrUserDishes objectAtIndex:i] objectForKey:@"uPay"] floatValue];
@@ -52,6 +52,7 @@
         
         [self.btnCancel setTitle:self.lblTotalAmount.text forState:UIControlStateNormal];
     }
+     [self.tblOrder reloadData];
 }
 
 -(void)DidFailToGetUserDishes:(RapidzzBaseManager *)manager error:(RapidzzError *)error

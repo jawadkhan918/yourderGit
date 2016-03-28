@@ -15,6 +15,9 @@
     BOOL check;
     BOOL userImages;
     int userCount;
+    UIButton *imageView;
+    UIButton *img;
+    NSMutableArray *arrSelectUser;
 }
 
 /*
@@ -26,10 +29,12 @@
         self.btnSplitEveryOne.imageView.image = [UIImage imageNamed:@"checkbox-red.png"];
 }
 */
- 
 
 -(void) bindDishInfo
 {
+    self.txtComments.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"comments-box.png"]];
+    
+    
     self.dishSplitUsers = @"";
     [self.btnSplitEveryOne setBackgroundImage:[UIImage imageNamed:@"checkbox-red.png"] forState:UIControlStateNormal];
     splitWithEveryOne = NO;
@@ -122,6 +127,8 @@
     self.tblUsers.dataSource = self;
     [self.tblUsers reloadData];
     [MBProgressHUD hideHUDForView:self animated:YES];
+    [self UserOnTable];
+    
 }
 
 -(void) didGetTableUsersFailed:(RapidzzBaseManager *)manager error:(RapidzzError *)error
@@ -401,9 +408,96 @@
     return YES;
 }
 
+-(void)UserOnTable{
+    
+    arrSelectUser = [[NSMutableArray alloc]init];
 
 
+    NSUInteger i;
+    int xCoord=5;
+    int yCoord=0;
+    int buttonWidth=40;
+    int buttonHeight=40;
+    int buffer = 20;
+    int labelWidth;
+    for (i = 0; i < self.arrUsers.count ; i++){
+        
+    
+     imageView = [[UIButton alloc] init];
+    
+            UILabel *userName = [[UILabel alloc] init];
+//        labelWidth = (int)[[[self.arrUsers objectAtIndex:i] objectForKey:@"table_username"] length] * 10;
+        NSArray* foo = [[[self.arrUsers objectAtIndex:i] objectForKey:@"table_username"] componentsSeparatedByString: @" "];
+        NSString* firstBit = [foo objectAtIndex:0];
+        
+        labelWidth = (int)[firstBit length]*10;
 
+        userName.frame = CGRectMake(xCoord,yCoord+43,labelWidth,buttonHeight);
+        imageView.frame = CGRectMake(xCoord,yCoord,buttonWidth,buttonHeight);
+        img = [[UIButton alloc]init];
+        
+        img.frame = CGRectMake(buttonWidth+3,0,20,20);
+
+    
+        //NSURL *agentImageURL = [NSURL URLWithString:[[self.arrUsers objectAtIndex:i] objectForKey:@"profile_picture"]];
+        
+        if ([[[self.arrUsers objectAtIndex:i] objectForKey:@"profile_picture"] length] < 10)
+        {
+            
+            [imageView setImage:[UIImage imageNamed:@"icon-person-notification.png"] forState:UIControlStateNormal];
+        }
+        else
+        {
+            //NSURL *agentImageURL = [NSURL URLWithString:[[self.arrUsers objectAtIndex:i] objectForKey:@"profile_picture"]];
+           
+            [imageView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[[self.arrUsers objectAtIndex:i] objectForKey:@"profile_picture"]]]]forState:UIControlStateNormal];
+            
+            //[imageView setBackgroundImage:imageViewb.image forState:UIControlStateNormal];
+            imageView.layer.cornerRadius=20;
+            imageView.layer.masksToBounds = YES;
+          
+        }
+       
+        userName.text  = firstBit;
+        
+        [imageView addTarget:self
+                      action:@selector(selectUser:)
+           forControlEvents:UIControlEventTouchUpInside];
+        
+        
+        imageView.tag = i;
+      
+   
+        
+        [self.userScroll addSubview:userName];
+        [self.userScroll addSubview:imageView];
+          [self.userScroll addSubview:img];
+        NSLog(@"xcoord == %i",xCoord);
+        xCoord = xCoord +userName.frame.size.width+buffer;
+        
+    }
+    
+    [self.userScroll setContentSize:CGSizeMake(xCoord, yCoord)];
+    
+
+}
+-(IBAction)selectUser:(id)sender{
+    
+    UIButton *instanceButton = (UIButton*)sender;
+    
+    if([[AppDelegate singleton].arrPersons containsObject:[self.arrUsers objectAtIndex:instanceButton.tag]])
+        {
+            [[AppDelegate singleton].arrPersons removeObject:[self.arrUsers objectAtIndex:instanceButton.tag]];
+            [img setBackgroundImage:nil forState:UIControlStateNormal];
+            
+        }else{
+        
+            [[AppDelegate singleton].arrPersons addObject:[self.arrUsers objectAtIndex:instanceButton.tag]];
+            [img setBackgroundImage:[UIImage imageNamed:@"download.png"] forState:UIControlStateNormal];
+        }
+
+
+}
 
 
 

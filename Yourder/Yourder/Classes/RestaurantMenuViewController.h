@@ -19,6 +19,10 @@
 
 @property (strong, nonatomic) NSDictionary *dictSelectedRestaurant;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrCatgories;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrDishes;
+@property (weak, nonatomic) IBOutlet UIView *viewDishes;
+@property (assign, nonatomic) BOOL shouldReturn;
+
 @property (strong, nonatomic) UIPageViewController *pageController;
 @property (strong, nonatomic) RapidzzUserManager *manager;
 @property (strong, nonatomic) NSMutableArray *arrCategories;
@@ -33,6 +37,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lblTotalItems;
 @property (weak, nonatomic) IBOutlet UIButton *btnYourOrder;
+@property (weak, nonatomic) IBOutlet UIButton *btnSubmitOrder;
+
 @property (weak, nonatomic) IBOutlet UIButton *slidebarButton;
 
 //POP UP
@@ -42,6 +48,8 @@
 @property (nonatomic,strong) CustomIOSAlertView *alertView;
 @property (strong, nonatomic) UIView *rightSliderView;
 @property (strong, nonatomic) UIView *placeOrderView;
+@property (weak, nonatomic) IBOutlet UIView *viewOrderList;
+
 
 @property (weak, nonatomic) IBOutlet UIButton *btnRightSlider;
 @property (strong, nonatomic) UILabel *lblItemCount;

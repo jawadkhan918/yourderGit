@@ -24,7 +24,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtQuantity;
 @property (weak, nonatomic) IBOutlet UIButton *btnAddQuantity;
 @property (weak, nonatomic) IBOutlet UIButton *btnLessQuantity;
-@property (weak, nonatomic) IBOutlet UITextField *txtComments;
+@property (weak, nonatomic) IBOutlet UITextView *txtComments;
+
 
 //Split
 @property (weak, nonatomic) IBOutlet UILabel *lblSplitWith;
@@ -43,6 +44,7 @@
 @property NSInteger selectedDishIndex;
 @property (strong, nonatomic) NSString *dishSplitUsers;
 @property (weak, nonatomic) IBOutlet UIView *tbl_bgview;
+@property (weak, nonatomic) IBOutlet UIScrollView *userScroll;
 
 
 //Table Users

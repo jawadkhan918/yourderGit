@@ -287,7 +287,7 @@
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     self.manager = [[RapidzzUserManager alloc] init];
     self.manager.delegate = self;
-    NSDictionary *dict = @{@"page":[NSString stringWithFormat:@"%i",pageCount],@"restlat":strLat,@"restlong":strLong};
+    NSDictionary *dict = @{@"page":[NSString stringWithFormat:@"%i",pageCount],@"restlat":@"31.5451",@"restlong":@"74.3407"};
     [self.manager getRestaurantList:dict];
 }
 
@@ -571,6 +571,7 @@
     
     
     NSURL *logoImageURL = [NSURL URLWithString:[dict objectForKey:@"rest_logo"]];
+
     //[cell.imgRetaurantLogo setImageWithURL:logoImageURL];
     if ([[dict objectForKey:@"rest_logo"] length] > 10)
     {
@@ -580,8 +581,6 @@
     {
         cell.imgRetaurantLogo.image = [UIImage imageNamed:@"icon-table.png"];
     }
-
-   
     cell.imgRetaurantLogo.layer.cornerRadius= cell.imgRetaurantLogo.frame.size.width / 2;
     cell.imgRetaurantLogo.layer.masksToBounds = YES;
     cell.imgRetaurantLogo.clipsToBounds = YES;
