@@ -20,6 +20,7 @@
 @property (strong, nonatomic) NSDictionary *dictSelectedRestaurant;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrCatgories;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrDishes;
+
 @property (weak, nonatomic) IBOutlet UIView *viewDishes;
 @property (assign, nonatomic) BOOL shouldReturn;
 

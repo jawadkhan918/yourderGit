@@ -77,6 +77,8 @@
 		524154F31CA3D039005ED45A /* cart-items-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 524154EC1CA3D039005ED45A /* cart-items-bg.png */; };
 		524154F41CA3D039005ED45A /* icon-nav.png in Resources */ = {isa = PBXBuildFile; fileRef = 524154ED1CA3D039005ED45A /* icon-nav.png */; };
 		524154F51CA3D039005ED45A /* icon-search-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 524154EE1CA3D039005ED45A /* icon-search-red.png */; };
+		524154F61CA3D039005ED45A /* item-overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 524154EF1CA3D039005ED45A /* item-overlay.png */; };
+
 		524154F91CA3E44F005ED45A /* unfilled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 524154F71CA3E44F005ED45A /* unfilled@2x.png */; };
 		524154FA1CA3E44F005ED45A /* unfilled@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 524154F81CA3E44F005ED45A /* unfilled@3x.png */; };
 		524154FC1CA41D30005ED45A /* StoryboardiPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524154FB1CA41D30005ED45A /* StoryboardiPad.storyboard */; };
@@ -159,6 +161,7 @@
 		52C7E5AC1C58E78800392668 /* icon-table.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C7E5A31C58E78800392668 /* icon-table.png */; };
 		52C7E5AD1C58E78800392668 /* thumb-restaurant-yourorder.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C7E5A41C58E78800392668 /* thumb-restaurant-yourorder.png */; };
 		52C7E5AE1C58E78800392668 /* thumb-user-yourorder.png in Resources */ = {isa = PBXBuildFile; fileRef = 52C7E5A51C58E78800392668 /* thumb-user-yourorder.png */; };
+		52CDC5781CA51F9C00BA89DB /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = 52CDC5771CA51F9C00BA89DB /* download.png */; };
 		52D30EF21C5249E400219B24 /* IQDropDownTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D30EF11C5249E400219B24 /* IQDropDownTextField.m */; };
 		52D6000B1C92BE9700994DFB /* UserOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D6000A1C92BE9700994DFB /* UserOrderViewController.m */; };
 		52D600141C92BF9000994DFB /* UserOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52D600131C92BF9000994DFB /* UserOrderTableViewCell.m */; };
@@ -1913,11 +1916,17 @@
 				520C11911C7463C7005B815F /* star-yellow.png in Resources */,
 				8321E7FC1C3C03E60095C3D7 /* btn-scan-qr-code.png in Resources */,
 				A8AABCFD1C5A2EB100723DF8 /* btn-black.png in Resources */,
+
 				2E58D2141CA44B060057E1FD /* item-overlay.png in Resources */,
+
 				83297B301C3163B900125EE7 /* login-google@2x.png in Resources */,
 				2EA214651CA5303600ADC724 /* white-margin.png in Resources */,
 				526071511C68CBD900D38704 /* btn-pay.png in Resources */,
+
 				2EA2145E1CA5303600ADC724 /* btn-pay-for.png in Resources */,
+				529029371C90550200008D94 /* unfilled@3x.png in Resources */,
+
+
 				5283B56A1C7C7A0500AA39EA /* close-notification.png in Resources */,
 				526071751C6F040900D38704 /* icon-arrow-down-w.png in Resources */,
 				5260710F1C5CD10200D38704 /* icon-settings.png in Resources */,
@@ -2012,6 +2021,7 @@
 				5283B56C1C7C9DE700AA39EA /* icon-person-notification.png in Resources */,
 				2E8E20F11CA692D600F7D500 /* btn-close.png in Resources */,
 				2E89D9BE1C4F678E00EC3DD7 /* icon-plus-black.png in Resources */,
+
 				2E8E20F51CA692D600F7D500 /* comments-box.png in Resources */,
 				524154FC1CA41D30005ED45A /* StoryboardiPad.storyboard in Resources */,
 				83AE4FE51C48A4250047ECB4 /* back-arrow.png in Resources */,
@@ -2052,7 +2062,9 @@
 				520C118C1C7463C7005B815F /* btn-red-1.png in Resources */,
 				83AE4FF81C48C2040047ECB4 /* icon-table.png in Resources */,
 				520C118D1C7463C7005B815F /* btn-red-accept.png in Resources */,
+
 				2EA2145F1CA5303600ADC724 /* btn-pay-now1.png in Resources */,
+
 				2E89D9C51C4F678E00EC3DD7 /* qty-bg-white.png in Resources */,
 				526071621C6DAEAD00D38704 /* icon_red_minus.png in Resources */,
 				2EA214631CA5303600ADC724 /* footer-pay.png in Resources */,

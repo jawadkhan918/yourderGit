@@ -21,6 +21,7 @@
     AppDelegate *delegate;
     UIView *serviceView;
     UIView *emptyView;
+
     UIView *orderView;
     NSMutableArray *arrUserDishes;
     
@@ -42,7 +43,6 @@
     pagerIndex = 0;
     pageIndex = 0;
     pagerStartFirstTime = YES;
-    
     //SLIDEBAR VIEW
     self.slidebarButton.tintColor = [UIColor colorWithWhite:0.1f alpha:0.9f];
     SWRevealViewController *revealViewController = self.revealViewController;
@@ -52,8 +52,10 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
 
-   
+    [self.scrCatgories setScrollEnabled:YES];
+    [self.scrDishes setScrollEnabled:YES];
     
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     //CALL BINDING METHODS
     [self getRestaurantMenuCategories];
@@ -68,6 +70,7 @@
     [mainWindow addSubview: self.btnServiceRequest];
     self.viewDishes.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"item-overlay.png"]];
     
+   
    
 }
 
@@ -105,6 +108,39 @@
     
 }
 
+//-(void)getDishes
+//{
+//    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    arrUserDishes = [[NSMutableArray alloc] init];
+//    self.manager = [[RapidzzUserManager alloc]init];
+//    self.manager.delegate = self;
+//    //NSLog(@"dict%@",[AppDelegate singleton].userInfo);
+//    NSDictionary *dict = @{@"login_id":[[AppDelegate singleton].userInfo objectForKey:@"login_id"]
+//                           ,@"status":@"0"};
+//    [self.manager getUserDishes:dict];
+//}
+//
+//-(void)DidGetUserDishesSuccessfully:(RapidzzBaseManager *)manager
+//{
+//    [MBProgressHUD hideHUDForView:self.view animated:YES];
+//    //serviceResponse = manager.data;
+//    arrUserDishes = [NSMutableArray arrayWithArray:[manager.data objectForKey:@"order_detail"]];
+//    [AppDelegate singleton].arrCurrOrder = arrUserDishes;
+//    //[self.tblOrder reloadData];
+//    for (int i = 0; i<arrUserDishes.count; i++)
+//    {
+//        [self addUserDishes];
+////        self.totalAmount = self.totalAmount + [[[arrUserDishes objectAtIndex:i] objectForKey:@"uPay"] floatValue];
+////        self.lblTotalAmount.text = [NSString stringWithFormat:@"%.02f",self.totalAmount];
+//    }
+//    //[AppDelegate singleton].totalBillAmount = self.totalAmount; //[[manager.data objectForKey:@"total_price"] floatValue];
+////    delegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+////    delegate.totalBillAmount = delegate.totalBillAmount + self.totalAmount;
+//    
+//    
+//}
+//
+
 -(void)DidFailToGetUserDishes:(RapidzzBaseManager *)manager error:(RapidzzError *)error
 {
     [MBProgressHUD hideHUDForView:self.view animated:YES];
@@ -118,7 +154,8 @@
     
     NSUInteger i;
     int xCoord=10;
-    int yCoord=63;
+
+    int yCoord=5;
     int buttonWidth=80;
     int buttonHeight=40;
     int buffer = 10;
@@ -130,6 +167,7 @@
         
         imageView = [[UIImageView alloc] init];
         
+
         imageView.frame = CGRectMake(xCoord,5,buttonWidth,buttonHeight);
       
 //        if ([[[arrUserDishes objectAtIndex:i] objectForKey:@"item_thumbnail"] length] < 10)
@@ -151,19 +189,14 @@
             
        // }
         UITapGestureRecognizer *tap =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(placeOrder:)];
-        [imageView addGestureRecognizer:tap];
-        imageView.userInteractionEnabled = YES;
-        [self.scrDishes addSubview:imageView];
-        
-        labelWidth = xCoord+50;
-        NSLog(@"width is %f",labelWidth);
-        NSLog(@"height is %d",yCoord);
-        
-        xCoord += buttonWidth + buffer;
-        
-    }
-    [self.scrDishes setContentSize:CGSizeMake(xCoord,49 )];
+      
+       [self.scrDishes setContentSize:CGSizeMake(xCoord,49 )];
    // [self.scrDishes setContentSize:CGSizeMake(labelWidth+5, yCoord)];
+        
+    
+    }
+    
+
     
 }
 -(void) bindRestInfo
