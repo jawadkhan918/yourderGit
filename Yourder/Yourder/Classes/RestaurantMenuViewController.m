@@ -188,14 +188,21 @@
 
             
        // }
-        UITapGestureRecognizer *tap =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(placeOrder:)];
-      
-       [self.scrDishes setContentSize:CGSizeMake(xCoord,49 )];
-   // [self.scrDishes setContentSize:CGSizeMake(labelWidth+5, yCoord)];
+        
+       
+        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(placeOrder)];
+        singleTap.numberOfTapsRequired = 1;
+        [imageView setUserInteractionEnabled:YES];
+        [imageView addGestureRecognizer:singleTap];
+        
+         [self.scrDishes addSubview:imageView];
+         xCoord = xCoord + buttonWidth + buffer;
+         // [self.scrDishes setContentSize:CGSizeMake(labelWidth+5, yCoord)];
         
     
     }
-    
+    [self.scrDishes setContentSize:CGSizeMake(xCoord,49 )];
+
 
     
 }
@@ -403,7 +410,7 @@
 //     action:@selector(placeOrder:)
 //     forControlEvents:UIControlEventTouchUpInside];
 //     //[button setTitle:@"Show View" forState:UIControlStateNormal];
-//     UIImage *btnImage = [UIImage imageNamed:@"btn-your-order.png"];
+//     UIImage *btnImage = [UIImage imageNamed:@"r-ordbtn-youer.png"];
 //     [button setImage:btnImage forState:UIControlStateNormal];
 //    
 //    
@@ -562,7 +569,7 @@
 
 #pragma mark - SEND ORDER TO KITCHEN
 
-- (IBAction)placeOrder:(id)sender
+- (void)placeOrder
 {
 ////    if ([AppDelegate singleton].arrCurrOrder.count > 0)
 //////    {

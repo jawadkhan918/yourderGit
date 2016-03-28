@@ -1055,7 +1055,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="btnRemove" destination="5XD-nj-kov" id="0hQ-qS-2QZ"/>
+                                            <outlet property="btnRemove" destination="5XD-nj-kov" id="Whm-R1-bQq"/>
                                             <outlet property="lblDishName" destination="tG7-6m-xPz" id="Hwa-5M-a0j"/>
                                             <outlet property="lblSplitWith" destination="Un6-7c-KC7" id="kzy-br-YnU"/>
                                             <outlet property="lblYouPay" destination="iJe-Tz-t0d" id="CWE-ku-Kw5"/>
@@ -2201,7 +2201,7 @@
                                             <constraint firstAttribute="height" constant="1" id="VEh-cU-d2x"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E21-iw-57o">
@@ -2211,7 +2211,7 @@
                                             <constraint firstAttribute="height" constant="1" id="FD5-3S-nU0"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
